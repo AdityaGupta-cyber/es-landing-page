@@ -1,6 +1,6 @@
 import NextVideo from "next-video";
 import Image from "next/image";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function Vibration2() {

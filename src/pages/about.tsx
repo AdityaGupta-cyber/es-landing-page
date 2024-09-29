@@ -3,7 +3,7 @@ import { Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import ScrollPlayVideo from "@/components/ScrollPlayVideo";
-import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });

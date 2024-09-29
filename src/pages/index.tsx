@@ -33,6 +33,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (!window) return;
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
     // Initial check
@@ -67,7 +68,7 @@ export default function Home() {
             <LogoAnimation2 />
           </motion.div>
           <BackgroundVideo
-            src={"/1.mp4"}
+            src={"/0.mp4"}
             autoPlay
             muted
             loop

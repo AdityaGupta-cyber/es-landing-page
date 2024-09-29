@@ -27,7 +27,7 @@ export default function Menu() {
             ABOUT
           </Link>
           <Link
-            href="/portfolio"
+            href="/"
             className="block text-[50px] font-light overflow-hidden mt-10  bg-white text-[#433631] w-fit px-10"
           >
             PORTFOLIO

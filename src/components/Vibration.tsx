@@ -32,7 +32,9 @@ interface TextPosition {
 }
 
 export default function Vibration() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const [current, setCurrent] = useState(-1);
+  const [start, setStart] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isEntering, setIsEntering] = useState(false); // New state for entering animation
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -285,7 +287,11 @@ export default function Vibration() {
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
 
-      const newRotation = scrollPosition; // Adjust the divisor to control rotation speed
+      if (scrollPosition > 0 && !start) {
+        setStart(true);
+      }
+      const newRotation = scrollPosition;
+      // Adjust the divisor to control rotation speed
       setRotation(newRotation - 0.2);
     };
 
@@ -295,10 +301,31 @@ export default function Vibration() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeIndex == 0 && current != 0 && start) {
+      setCurrent(0);
+
+      window.scrollTo({
+        top: 350,
+      });
+    } else if (activeIndex == 1 && current != 1) {
+      setCurrent(1);
+      window.scrollTo({
+        top: 610,
+      });
+    } else if (activeIndex == 2 && current != 2) {
+      setCurrent(2);
+      window.scrollTo({
+        top: 1500,
+      });
+    }
+  }, [activeIndex, start]);
+
   const calculatePosition = (index: number): TextPosition => {
     const rotate = -(rotation * 300) % 8;
     const x = -rotation * 200 + index;
-    const y = -rotation * 2400 + index * 700;
+    const y = -rotation * 4400 + index * 700;
     console.info(x, y);
     const opacity = 1; // Visible on the left side
 
@@ -372,18 +399,23 @@ export default function Vibration() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!sectionRef.current || !start) return;
 
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollProgress = 1 - rect.bottom / rect.height;
       console.info("sp", scrollProgress);
-      const newIndex =
-        scrollProgress >= 0 && scrollProgress <= 0.43
-          ? 0
-          : scrollProgress >= 0.75
-          ? 2
-          : 1;
-      console.info("ni", newIndex);
+      let newIndex = 0;
+      if (activeIndex == -1) {
+        newIndex = 0;
+      } else {
+        newIndex =
+          scrollProgress >= 0 && scrollProgress <= 0.26
+            ? 0
+            : scrollProgress >= 0.43
+            ? 2
+            : 1;
+        console.info("ni", newIndex);
+      }
 
       if (
         newIndex !== activeIndex &&
@@ -410,11 +442,11 @@ export default function Vibration() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeIndex]);
+  }, [activeIndex, start]);
 
   return (
     <div
-      className="relative  min-h-screen h-[580vh] w-full bg-white"
+      className="relative  min-h-screen h-[220vh] w-full bg-white"
       ref={sectionRef}
     >
       {" "}
@@ -452,7 +484,7 @@ export default function Vibration() {
                         isEntering ? "transition-in" : ""
                       } text-4xl overflow-hidden sm:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-10 relative lg:w-[350px] xl:w-[550px] break-words`}
                     >
-                      {products[activeIndex].title}
+                      {products[activeIndex]?.title}
                     </h2>
                   )}
                 </motion.div>

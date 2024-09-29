@@ -287,15 +287,15 @@ export default function Vibration() {
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
       console.info("lol", scrollPosition);
-      if (scrollPosition > 0.26 && scrollPosition < 0.27) {
+      if (scrollPosition > 0.27 && scrollPosition < 0.27) {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.39 && scrollPosition < 0.4) {
+      } else if (scrollPosition > 0.39 && scrollPosition < 0.39) {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.6 && scrollPosition < 0.61) {
+      } else if (scrollPosition > 0.6 && scrollPosition < 0.6) {
         window.scrollTo({
           top: 910,
         });
@@ -305,11 +305,11 @@ export default function Vibration() {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.34 && scrollPosition < 0.35) {
+      } else if (scrollPosition > 0.34 && scrollPosition < 0.34) {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.465 && scrollPosition < 0.47) {
+      } else if (scrollPosition > 0.465 && scrollPosition < 0.465) {
         window.scrollTo({
           top: 910,
         });

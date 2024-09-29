@@ -128,7 +128,7 @@ export default function Vibration() {
 
     <div
       key={2}
-      className="relative overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
+      className="relative lg:mt-40 xl:mt-0 overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
     >
       <motion.img
         src="/33.png"
@@ -484,9 +484,9 @@ export default function Vibration() {
           <div
             className={`${
               knowMore ? "mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
-            } w-full mx-auto flex flex-col items-center lg:flex-row justify-between gap-44`}
+            } w-full mx-auto flex flex-col lg:flex-row justify-between gap-44`}
           >
-            <div className="w-full mb-8 lg:mb-0">
+            <div className="w-full mb-8 lg:mb-0 mt-40">
               <AnimatePresence>
                 {" "}
                 <motion.div
@@ -543,7 +543,7 @@ export default function Vibration() {
               )}
             </div>
             {!knowMore && (
-              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10  overflow-visible lg:mt-[10vw] xl:mt-0">
+              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10  overflow-visible lg:mt-40 xl:mt-12">
                 <div
                   className={`relative`}
                   style={{

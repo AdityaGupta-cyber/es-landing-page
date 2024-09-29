@@ -305,7 +305,7 @@ export default function Vibration() {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.31 && scrollPosition < 0.32) {
+      } else if (scrollPosition > 0.35 && scrollPosition < 0.36) {
         window.scrollTo({
           top: 610,
         });
@@ -543,7 +543,7 @@ export default function Vibration() {
               )}
             </div>
             {!knowMore && (
-              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10  overflow-visible lg:-mt-0 xl:-mt-10">
+              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible  xl:-mt-10">
                 <div
                   className={`relative`}
                   style={{

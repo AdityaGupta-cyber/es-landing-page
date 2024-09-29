@@ -309,7 +309,7 @@ export default function Vibration() {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.5 && scrollPosition < 0.52) {
+      } else if (scrollPosition > 0.5 && scrollPosition < 0.51) {
         window.scrollTo({
           top: 1500,
         });

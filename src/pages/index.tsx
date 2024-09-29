@@ -1,14 +1,10 @@
-import localFont from "next/font/local";
 import BackgroundVideo from "next-video/background-video";
 import LogoAnimation from "@/components/LogoAnimation";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Menu from "@/components/Menu";
 import LogoAnimation2 from "@/components/LogoAnimation2";
 import Navbar from "@/components/Navbar";
 import Vibration from "@/components/Vibration";
-import Scarlet from "@/components/Scarlet";
-import Bloomscape from "@/components/Bloomscape";
 
 export default function Home() {
   const controls = useAnimation();

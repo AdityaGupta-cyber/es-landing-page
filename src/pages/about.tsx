@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import ScrollPlayVideo from "@/components/ScrollPlayVideo";
 
-const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
@@ -95,10 +94,10 @@ function RightColumn() {
         Ekant Singh envision THE world where his thoughts IDEATE THE
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
-        captivating but also unparalleled in their ability to evoke emotion's
-        THAT ARE inspirational. Through his design's, painting'S and styling, he
-        aim's to bring his artistic vision to life, crafting timeless creations
-        that leave EVER lasting impressions.
+        captivating but also unparalleled in their ability to evoke emotion{"'"}
+        s THAT ARE inspirational. Through his design{"'"}s, painting'S and
+        styling, he aim{"'"}s to bring his artistic vision to life, crafting
+        timeless creations that leave EVER lasting impressions.
       </p>
       <Image
         src="/about1.png"
@@ -113,17 +112,17 @@ function RightColumn() {
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
       <p className="mb-6 text-xs xl:text-sm uppercase max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
-        I've always had an insatiable appetite for turning the unusual into art.
-        As an industrial designer, I see potential in materials others might
-        overlook. My vision pushes me to transcend conventional design
+        I{"'"}ve always had an insatiable appetite for turning the unusual into
+        art. As an industrial designer, I see potential in materials others
+        might overlook. My vision pushes me to transcend conventional design
         boundaries.
         <br />
         <br />
-        With every piece I create, I'm not just solving a problem - I'm telling
-        a story. I challenge myself to break my own benchmarks, always seeking
-        that spark of originality that will breathe life into an object. For me,
-        design isn't just a job - it's a journey of constant reinvention and
-        creative exploration.
+        With every piece I create, I{"'"}m not just solving a problem - I{"'"}m
+        telling a story. I challenge myself to break my own benchmarks, always
+        seeking that spark of originality that will breathe life into an object.
+        For me, design isn{"'"}t just a job - it{"'"}s a journey of constant
+        reinvention and creative exploration.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-16 lg:mt-20">
         <Image
@@ -149,7 +148,7 @@ function RightColumn() {
           YOU DIE
         </h2>
         <p className="mb-6 text-xs xl:text-sm uppercase max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
-          If you’ve written your love from the heart and you really mean the
+          If you{"'"}ve written your love from the heart and you really mean the
           words that you have written then no matter you remain or depart, your
           picture of words would never be forgotten.
           <br />

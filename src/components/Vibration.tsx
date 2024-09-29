@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import Navbar from "./Navbar";
 import localFont from "next/font/local";
 import { useState, useEffect, useRef } from "react";
 import Vibration2 from "./Vibration2";

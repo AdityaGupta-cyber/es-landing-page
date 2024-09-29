@@ -478,7 +478,7 @@ export default function Vibration() {
     >
       {" "}
       <div
-        className={`${BlackMango.className}  sticky z-0 top-0 min-h-screen h-screen max-h-screen w-full bg-[#f8f7f4] text-[#433631] flex flex-col p1 overflow-hidden`}
+        className={`${BlackMango.className}  sticky z-0 top-0 min-h-screen w-full bg-[#f8f7f4] text-[#433631] flex flex-col p1 overflow-hidden`}
       >
         <main className="flex-grow flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
           <div

@@ -20,18 +20,22 @@ export default function Menu() {
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         <div className="mb-4 md:mb-0">
-          <Link
-            href="/about"
-            className="block mb-2 text-[50px] font-light overflow-hidden mt-10 bg-white text-[#433631] w-fit px-10"
+          <div
+            onClick={() => {
+              window.open("/about", "_self");
+            }}
+            className="block mb-2 text-[50px] font-light overflow-hidden mt-10 bg-white text-[#433631] w-fit px-10 cursor-pointer"
           >
             ABOUT
-          </Link>
-          <Link
-            href="/"
-            className="block text-[50px] font-light overflow-hidden mt-10  bg-white text-[#433631] w-fit px-10"
+          </div>
+          <div
+            onClick={() => {
+              window.open("/", "_self");
+            }}
+            className="block text-[50px] font-light overflow-hidden mt-10  bg-white text-[#433631] w-fit px-10 cursor-pointer"
           >
             PORTFOLIO
-          </Link>
+          </div>
         </div>
         <div className="mb-4 md:mb-0 text-md font-sans">
           <p className="mb-1">Say Hello</p>

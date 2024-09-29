@@ -116,3 +116,7 @@ body {
     opacity: 1; /* Ensure full opacity on enter */
   }
 }
+
+.para > div {
+  background-size: auto !important;
+}

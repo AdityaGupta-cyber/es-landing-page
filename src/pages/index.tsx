@@ -33,7 +33,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (!window) return;
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
     // Initial check

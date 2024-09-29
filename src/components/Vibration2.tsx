@@ -34,17 +34,11 @@ export default function Vibration2() {
 
         <section className="mb-24 min-w-screen">
           <div className="relative mb-4 -ml-[150px] w-screen">
-            <ParallaxBanner style={{ aspectRatio: "2 / 1" }}>
-              <ParallaxBannerLayer speed={-20}>
-                <Image
-                  src="/vibration2-1.png"
-                  alt="Elegant living room with large windows and circular table"
-                  width={6000}
-                  height={3000}
-                  objectFit="cover"
-                />{" "}
-              </ParallaxBannerLayer>
-            </ParallaxBanner>
+            <ParallaxBanner
+              className="para"
+              style={{ aspectRatio: "2 / 1" }}
+              layers={[{ image: "/vibration2-1.png", speed: -30 }]}
+            />
           </div>
 
           <div className="flex gap-40 justify-start mt-40">
@@ -63,17 +57,11 @@ export default function Vibration2() {
 
         <section className="min-w-screen">
           <div className="relative mb-4 -ml-[150px] w-screen">
-            <ParallaxBanner style={{ aspectRatio: "2 / 1" }}>
-              <ParallaxBannerLayer speed={-20}>
-                <Image
-                  src="/vibration2-2.png"
-                  alt="Elegant living room with large windows and circular table"
-                  width={6000}
-                  height={3000}
-                  objectFit="cover"
-                />
-              </ParallaxBannerLayer>
-            </ParallaxBanner>
+            <ParallaxBanner
+              className="para"
+              style={{ aspectRatio: "2 / 1" }}
+              layers={[{ image: "/vibration2-2.png", speed: -30 }]}
+            />
           </div>
         </section>
 

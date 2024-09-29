@@ -3,6 +3,8 @@ import { Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import ScrollPlayVideo from "@/components/ScrollPlayVideo";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const BlackMango = localFont({
@@ -11,18 +13,20 @@ const BlackMango = localFont({
 
 export default function Page() {
   return (
-    <div
-      className={`bg-[#433631] mx-0 px-0 flex justify-center min-h-screen w-full text-white ${BlackMango.className}`}
-    >
-      <div className="py-8 w-full">
-        <div className="w-full px-4 max-w-6xl  md:w-[60%] lg:w-[65%] mx-auto">
-          <Header />
+    <ParallaxProvider>
+      <div
+        className={`bg-[#433631] mx-0 px-0 flex justify-center min-h-screen w-full text-white ${BlackMango.className}`}
+      >
+        <div className="py-8 w-full">
+          <div className="w-full px-4 max-w-6xl  md:w-[60%] lg:w-[65%] mx-auto">
+            <Header />
+          </div>
+          <MainContent />
+          <Footer />
         </div>
-        <MainContent />
-        <Footer />
+        <Navbar />
       </div>
-      <Navbar />
-    </div>
+    </ParallaxProvider>
   );
 }
 
@@ -99,12 +103,9 @@ function RightColumn() {
         styling, he aim{"'"}s to bring his artistic vision to life, crafting
         timeless creations that leave EVER lasting impressions.
       </p>
-      <Image
-        src="/about1.png"
-        alt="Designer at work"
-        width={600}
-        height={600}
-        className="w-full h-auto object-cover my-8 pt-10 md:pt-16 lg:pt-20"
+      <ParallaxBanner
+        className="para w-full h-auto object-cover my-8 pt-10 md:pt-16 lg:pt-20 aspect-[756/406]"
+        layers={[{ image: "/about1.png", speed: -10 }]}
       />
       <h2
         className={`text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}

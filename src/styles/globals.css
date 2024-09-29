@@ -25,3 +25,94 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the video */
+.front video {
+  opacity: 0;
+  animation: fadeIn 5s ease-in forwards;
+  animation-delay: 5s; /* 3s for slow fade-in */
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  transition: transform 0.5s ease;
+}
+
+.box::before {
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.box::after {
+  right: 0;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.box:hover::before {
+  transform: translateX(-30px);
+}
+
+.box:hover::after {
+  transform: translateX(30px);
+}
+
+.video-wrapper-1 {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  transform-origin: center center;
+  transition: transform 1s ease-out;
+}
+
+.p1 {
+  background-image: url("/bg1.png");
+  background-size: cover;
+}
+.p2 {
+  background-image: url("/bg2.png");
+  background-size: cover;
+}
+.p3 {
+  background-image: url("/bg3.png");
+  background-size: cover;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+.description {
+  font-size: 1.25rem;
+  transition: transform 0.3s;
+  transition-delay: 0.1s;
+}
+.transition-out {
+  transform: translateY(-100%);
+}
+.transition-in {
+  transform: translateY(100%); /* Slide in from below */
+  opacity: 0;
+  animation: fadeInUp 0.3s forwards; /* Add fade-in effect */
+}
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1; /* Ensure full opacity on enter */
+  }
+}

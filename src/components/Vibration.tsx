@@ -286,7 +286,34 @@ export default function Vibration() {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
+      console.info("lol", scrollPosition);
+      if (scrollPosition > 0.24 && scrollPosition < 0.25) {
+        window.scrollTo({
+          top: 350,
+        });
+      } else if (scrollPosition > 0.38 && scrollPosition < 0.4) {
+        window.scrollTo({
+          top: 610,
+        });
+      } else if (scrollPosition > 0.6 && scrollPosition < 0.61) {
+        window.scrollTo({
+          top: 1500,
+        });
+      }
 
+      if (scrollPosition > 0.12 && scrollPosition < 0.22) {
+        window.scrollTo({
+          top: 350,
+        });
+      } else if (scrollPosition > 0.31 && scrollPosition < 0.32) {
+        window.scrollTo({
+          top: 610,
+        });
+      } else if (scrollPosition > 0.5 && scrollPosition < 0.52) {
+        window.scrollTo({
+          top: 1500,
+        });
+      }
       if (scrollPosition > 0 && !start) {
         setStart(true);
       }
@@ -409,7 +436,7 @@ export default function Vibration() {
         newIndex = 0;
       } else {
         newIndex =
-          scrollProgress >= 0 && scrollProgress <= 0.26 && activeIndex <= 1
+          scrollProgress > 0 && scrollProgress <= 0.26 && activeIndex <= 1
             ? 0
             : scrollProgress >= 0.43 && activeIndex >= 1
             ? 2

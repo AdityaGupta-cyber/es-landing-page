@@ -128,7 +128,7 @@ export default function Vibration() {
 
     <div
       key={2}
-      className="relative lg:mt-40 xl:mt-0 overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
+      className="relative xl:mt-0 overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
     >
       <motion.img
         src="/33.png"
@@ -204,7 +204,7 @@ export default function Vibration() {
     </div>,
     <div
       key={1}
-      className="relative overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
+      className="relative xl:mt-0 overflow-visible h-[80vh] z-10 w-[38vw] cursor-pointer"
     >
       <motion.img
         src="/3.png"
@@ -297,7 +297,7 @@ export default function Vibration() {
         });
       } else if (scrollPosition > 0.6 && scrollPosition < 0.61) {
         window.scrollTo({
-          top: 1500,
+          top: 910,
         });
       }
 
@@ -311,7 +311,7 @@ export default function Vibration() {
         });
       } else if (scrollPosition > 0.5 && scrollPosition < 0.51) {
         window.scrollTo({
-          top: 1500,
+          top: 910,
         });
       }
       if (scrollPosition > 0 && !start) {
@@ -344,7 +344,7 @@ export default function Vibration() {
     } else if (activeIndex == 2 && current != 2) {
       setCurrent(2);
       window.scrollTo({
-        top: 1500,
+        top: 910,
       });
     }
   }, [activeIndex, start]);
@@ -473,20 +473,20 @@ export default function Vibration() {
 
   return (
     <div
-      className="relative  min-h-screen h-[220vh] w-full bg-white"
+      className="relative  min-h-screen h-[1700px] w-full bg-white"
       ref={sectionRef}
     >
       {" "}
       <div
-        className={`${BlackMango.className}  sticky z-0 top-0 min-h-screen w-full bg-[#f8f7f4] text-[#433631] flex flex-col p1 overflow-hidden`}
+        className={`${BlackMango.className}  sticky z-0 top-0 min-h-screen h-screen max-h-screen w-full bg-[#f8f7f4] text-[#433631] flex flex-col p1 overflow-hidden`}
       >
         <main className="flex-grow flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
           <div
             className={`${
               knowMore ? "mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
-            } w-full mx-auto flex flex-col lg:flex-row justify-between gap-44`}
+            } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-44`}
           >
-            <div className="w-full mb-8 lg:mb-0 mt-40">
+            <div className="w-full mb-8 lg:mb-0">
               <AnimatePresence>
                 {" "}
                 <motion.div
@@ -543,7 +543,7 @@ export default function Vibration() {
               )}
             </div>
             {!knowMore && (
-              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10  overflow-visible lg:mt-40 xl:mt-12">
+              <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10  overflow-visible lg:-mt-0 xl:-mt-10">
                 <div
                   className={`relative`}
                   style={{

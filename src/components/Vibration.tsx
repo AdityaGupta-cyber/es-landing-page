@@ -409,9 +409,9 @@ export default function Vibration() {
         newIndex = 0;
       } else {
         newIndex =
-          scrollProgress >= 0 && scrollProgress <= 0.26
+          scrollProgress >= 0 && scrollProgress <= 0.26 && activeIndex <= 1
             ? 0
-            : scrollProgress >= 0.43 && activeIndex == 1
+            : scrollProgress >= 0.43 && activeIndex >= 1
             ? 2
             : 1;
         console.info("ni", newIndex);

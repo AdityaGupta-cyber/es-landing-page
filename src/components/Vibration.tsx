@@ -411,7 +411,7 @@ export default function Vibration() {
         newIndex =
           scrollProgress >= 0 && scrollProgress <= 0.26
             ? 0
-            : scrollProgress >= 0.43
+            : scrollProgress >= 0.43 && activeIndex == 1
             ? 2
             : 1;
         console.info("ni", newIndex);

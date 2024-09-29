@@ -95,7 +95,7 @@ function RightColumn() {
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
         captivating but also unparalleled in their ability to evoke emotion{"'"}
-        s THAT ARE inspirational. Through his design{"'"}s, painting'S and
+        s THAT ARE inspirational. Through his design{"'"}s, painting{"'"}S and
         styling, he aim{"'"}s to bring his artistic vision to life, crafting
         timeless creations that leave EVER lasting impressions.
       </p>

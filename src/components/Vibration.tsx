@@ -287,34 +287,38 @@ export default function Vibration() {
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
       console.info("lol", scrollPosition);
-      if (scrollPosition > 0.27 && scrollPosition < 0.27) {
+      if (scrollPosition > 0.27 && scrollPosition < 0.27 && !knowMore) {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.39 && scrollPosition < 0.39) {
+      } else if (scrollPosition > 0.39 && scrollPosition < 0.39 && !knowMore) {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.6 && scrollPosition < 0.6) {
+      } else if (scrollPosition > 0.6 && scrollPosition < 0.6 && !knowMore) {
         window.scrollTo({
           top: 910,
         });
       }
 
-      if (scrollPosition > 0.12 && scrollPosition < 0.22) {
+      if (scrollPosition > 0.12 && scrollPosition < 0.22 && !knowMore) {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.34 && scrollPosition < 0.34) {
+      } else if (scrollPosition > 0.34 && scrollPosition < 0.34 && !knowMore) {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.465 && scrollPosition < 0.465) {
+      } else if (
+        scrollPosition > 0.465 &&
+        scrollPosition < 0.465 &&
+        !knowMore
+      ) {
         window.scrollTo({
           top: 910,
         });
       }
-      if (scrollPosition > 0 && !start) {
+      if (scrollPosition > 0 && !start && !knowMore) {
         setStart(true);
       }
       const newRotation = scrollPosition;
@@ -327,27 +331,27 @@ export default function Vibration() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [knowMore]);
 
   useEffect(() => {
-    if (activeIndex == 0 && current != 0 && start) {
+    if (activeIndex == 0 && current != 0 && start && !knowMore) {
       setCurrent(0);
 
       window.scrollTo({
         top: 350,
       });
-    } else if (activeIndex == 1 && current != 1) {
+    } else if (activeIndex == 1 && current != 1 && !knowMore) {
       setCurrent(1);
       window.scrollTo({
         top: 610,
       });
-    } else if (activeIndex == 2 && current != 2) {
+    } else if (activeIndex == 2 && current != 2 && !knowMore) {
       setCurrent(2);
       window.scrollTo({
         top: 910,
       });
     }
-  }, [activeIndex, start]);
+  }, [activeIndex, start, knowMore]);
 
   const calculatePosition = (index: number): TextPosition => {
     const rotate = -(rotation * 300) % 8;

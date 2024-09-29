@@ -335,16 +335,19 @@ export default function Vibration() {
 
       window.scrollTo({
         top: 350,
+        behavior: "smooth",
       });
     } else if (activeIndex == 1 && current != 1) {
       setCurrent(1);
       window.scrollTo({
         top: 610,
+        behavior: "smooth",
       });
     } else if (activeIndex == 2 && current != 2) {
       setCurrent(2);
       window.scrollTo({
         top: 1500,
+        behavior: "smooth",
       });
     }
   }, [activeIndex, start]);

@@ -305,11 +305,11 @@ export default function Vibration() {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.35 && scrollPosition < 0.36) {
+      } else if (scrollPosition > 0.34 && scrollPosition < 0.35) {
         window.scrollTo({
           top: 610,
         });
-      } else if (scrollPosition > 0.5 && scrollPosition < 0.51) {
+      } else if (scrollPosition > 0.465 && scrollPosition < 0.47) {
         window.scrollTo({
           top: 910,
         });

@@ -287,7 +287,7 @@ export default function Vibration() {
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
       console.info("lol", scrollPosition);
-      if (scrollPosition > 0.24 && scrollPosition < 0.25) {
+      if (scrollPosition > 0.26 && scrollPosition < 0.27) {
         window.scrollTo({
           top: 350,
         });

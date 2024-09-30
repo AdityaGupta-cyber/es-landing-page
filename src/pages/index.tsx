@@ -9,7 +9,7 @@ import Vibration from "@/components/Vibration";
 export default function Home() {
   const controls = useAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
-
+  const [intro, setIntro] = useState(true);
   const controls2 = useAnimation();
 
   const sectionRef2 = useRef<HTMLDivElement>(null);
@@ -29,6 +29,9 @@ export default function Home() {
     } else {
       controls.start({ opacity: 1, y: 1000 });
       controls2.start({ opacity: 1, y: -1000 });
+      setTimeout(() => {
+        setIntro(false);
+      }, 1000);
     }
   };
 
@@ -66,15 +69,17 @@ export default function Home() {
           >
             <LogoAnimation2 />
           </motion.div>
-          <BackgroundVideo
-            src={"/0.mp4"}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
-            currentTime={2000}
-          ></BackgroundVideo>
+          {intro && (
+            <BackgroundVideo
+              src={"/1.mp4"}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              currentTime={2000}
+            ></BackgroundVideo>
+          )}
         </motion.div>
 
         <motion.div
@@ -96,15 +101,17 @@ export default function Home() {
           >
             <LogoAnimation />
           </motion.div>
-          <BackgroundVideo
-            src={"/0.mp4"}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
-            currentTime={2000}
-          ></BackgroundVideo>
+          {intro && (
+            <BackgroundVideo
+              src={"/1.mp4"}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              currentTime={2000}
+            ></BackgroundVideo>
+          )}
         </motion.div>
       </motion.div>
 

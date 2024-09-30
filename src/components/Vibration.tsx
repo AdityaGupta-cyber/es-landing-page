@@ -287,11 +287,11 @@ export default function Vibration() {
       const rect = sectionRef.current.getBoundingClientRect();
       const scrollPosition = 1 - rect.bottom / rect.height;
       console.info("lol", scrollPosition);
-      if (scrollPosition > 0.27 && scrollPosition < 0.27 && !knowMore) {
+      if (scrollPosition > 0.28 && scrollPosition < 0.28 && !knowMore) {
         window.scrollTo({
           top: 350,
         });
-      } else if (scrollPosition > 0.39 && scrollPosition < 0.39 && !knowMore) {
+      } else if (scrollPosition > 0.36 && scrollPosition < 0.36 && !knowMore) {
         window.scrollTo({
           top: 610,
         });

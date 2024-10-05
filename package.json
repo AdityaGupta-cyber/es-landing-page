@@ -12,12 +12,14 @@
     "framer-motion": "^11.5.4",
     "next": "14.2.9",
     "next-video": "^1.1.4",
+    "normalize-wheel": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/normalize-wheel": "^1.0.4",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

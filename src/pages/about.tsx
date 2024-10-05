@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
@@ -5,11 +7,15 @@ import Navbar from "@/components/Navbar";
 import ScrollPlayVideo from "@/components/ScrollPlayVideo";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { useState, useEffect, useRef } from "react";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
 });
+
+// Array of placeholder images
+const placeholderImages = ["/ekant.png", "/ekant2.png", "/ekant3.png"];
 
 export default function Page() {
   return (
@@ -31,14 +37,44 @@ export default function Page() {
 }
 
 function Header() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentImageIndex(
+              (prevIndex) => (prevIndex + 1) % placeholderImages.length
+            );
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
   return (
     <header className="relative  mb-12 mt-20 md:mt-[200px] lg:mt-[300px]">
       <Image
-        src="/ekant.png"
+        src={placeholderImages[currentImageIndex]}
+        id="ekant"
         alt="Ekant Singh"
         width={2000}
         height={2000}
         className="w-full h-auto object-cover"
+        ref={imageRef}
       />
       <div className="absolute bg-white text-center p-4 md:p-8 lg:p-10 -top-10 md:-top-32 lg:-top-40 left-0 md:-left-20 lg:-left-28 right-0 text-black w-full md:w-fit rounded-full">
         <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide">

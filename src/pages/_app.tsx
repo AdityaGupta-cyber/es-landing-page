@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     document.addEventListener("mousewheel", function (event) {
       const normalized = normalizeWheel(event);
 
-      console.log(normalized.pixelX, normalized.pixelY);
+      ////console.log(normalized.pixelX, normalized.pixelY);
     });
   }, []);
 

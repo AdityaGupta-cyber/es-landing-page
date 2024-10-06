@@ -18,6 +18,8 @@ const BlackMango = localFont({
 const placeholderImages = ["/ekant.png", "/ekant2.png", "/ekant3.png"];
 
 export default function Page() {
+  const [dark, setDark] = useState(true);
+
   return (
     <ParallaxProvider>
       <div
@@ -30,7 +32,7 @@ export default function Page() {
           <MainContent />
           <Footer />
         </div>
-        <Navbar />
+        <Navbar dark={dark} />
       </div>
     </ParallaxProvider>
   );

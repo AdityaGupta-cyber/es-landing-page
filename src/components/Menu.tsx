@@ -16,9 +16,9 @@ const BlackMango = localFont({
 export default function Menu() {
   return (
     <nav
-      className={`z-50 fixed h-[50%] inset-0 bg-[#FF7600] text-white py-8 px-6 md:px-12 overflow-auto 4 ${BlackMango.className}`}
+      className={`fixed h-[50%] inset-0 bg-[#FF7600] text-white py-8 px-6 md:px-12 overflow-visible z-50 ${BlackMango.className}`}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div className="max-w-7xl relative z-20 mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mt-5">
         <div className="mb-4 md:mb-0">
           <div
             onClick={() => {
@@ -49,6 +49,13 @@ export default function Menu() {
           <Image src="/logo.svg" width={340} height={340} alt="alt" />
         </div>
       </div>
+      <Image
+        src="/menu.svg"
+        width={340}
+        height={340}
+        alt="alt"
+        className="absolute -bottom-24 z-0 left-0 w-screen"
+      />
     </nav>
   );
 }

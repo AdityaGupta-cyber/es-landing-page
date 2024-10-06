@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
 });
-export default function Navbar() {
+export default function Navbar({ dark }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -18,19 +18,19 @@ export default function Navbar() {
       >
         <div
           className={`w-6 h-0.5 ${
-            isMenuOpen ? "bg-white" : "bg-[#3c3c3c]"
+            isMenuOpen ? "bg-[#FBFEF9]" : dark ? "bg-[#FBFEF9]" : "bg-[#433631]"
           } transition-transform ${
             isMenuOpen ? "rotate-45 translate-y-1.5" : ""
           }`}
         ></div>
         <div
           className={`w-6 h-0.5 ${
-            isMenuOpen ? "bg-white" : "bg-[#3c3c3c]"
+            isMenuOpen ? "bg-[#FBFEF9]" : dark ? "bg-[#FBFEF9]" : "bg-[#433631]"
           } transition-opacity ${isMenuOpen ? "opacity-0" : ""}`}
         ></div>
         <div
           className={`w-6 h-0.5 ${
-            isMenuOpen ? "bg-white" : "bg-[#3c3c3c]"
+            isMenuOpen ? "bg-[#FBFEF9]" : dark ? "bg-[#FBFEF9]" : "bg-[#433631]"
           } transition-transform ${
             isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
           }`}

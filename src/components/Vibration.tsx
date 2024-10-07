@@ -179,7 +179,7 @@ export default function Vibration({ id }: any) {
           !knowMore
         ) {
           window.scrollTo({
-            top: i * 435 + 150, // Adjust this value based on your layout
+            top: i * 440 + 150, // Adjust this value based on your layout
           });
           setActiveIndex(i);
           break;
@@ -211,7 +211,7 @@ export default function Vibration({ id }: any) {
     ) {
       setCurrent(activeIndex);
       window.scrollTo({
-        top: activeIndex * 435 + 150, // Adjust this value based on your layout
+        top: activeIndex * 440 + 150, // Adjust this value based on your layout
       });
     }
   }, [activeIndex, start, knowMore]);
@@ -219,7 +219,7 @@ export default function Vibration({ id }: any) {
   const calculatePosition = (index: number): TextPosition => {
     const rotate = -(rotation * 300) % 8;
     const x = -70;
-    const y = -rotation * 5600 + index * 700;
+    const y = -rotation * 5600 + index * 710;
     //console.info(x, y);
     const opacity = 1; // Visible on the left side
 
@@ -442,7 +442,7 @@ export default function Vibration({ id }: any) {
                 )}
               </div>
               {!knowMore && (
-                <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible xl:-mt-10">
+                <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible lg:mt-20 xl:-mt-10">
                   <div
                     className="relative"
                     style={{

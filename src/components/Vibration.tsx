@@ -292,7 +292,7 @@ export default function Vibration({ id }: VibrationProps) {
         zIndex: 40,
       });
     } else {
-      let pos = [22, 8, 16, 14, 5, 14, 22];
+      const pos = [22, 8, 16, 14, 5, 14, 22];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",
@@ -348,7 +348,7 @@ export default function Vibration({ id }: VibrationProps) {
   }, [activeIndex, start, knowMore, products.length]);
 
   // Calculate dynamic container height based on number of products
-  const containerHeight = products.length * 570 + 200; // 570px per product + 200px buffer
+  // 570px per product + 200px buffer
 
   return (
     <>

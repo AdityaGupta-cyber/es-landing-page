@@ -1,7 +1,7 @@
 import NextVideo from "next-video";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import localFont from "next/font/local";

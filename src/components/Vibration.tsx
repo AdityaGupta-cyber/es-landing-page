@@ -281,7 +281,7 @@ export default function Vibration({ id }: any) {
         zIndex: 40,
       });
     } else {
-      let pos = [22, 8, 16, 14, 5, 14, 22];
+      const pos = [22, 8, 16, 14, 5, 14, 22];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",

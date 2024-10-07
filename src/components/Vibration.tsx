@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  AnimatePresence,
-  motion,
-  useAnimation,
-  AnimationControls,
-} from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import localFont from "next/font/local";
 import { useState, useEffect, useRef } from "react";
 import Vibration2 from "./Vibration2";
@@ -15,12 +10,7 @@ const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
 });
 
-interface Product {
-  title: string;
-  description: string;
-}
-
-const products: Product[] = [
+const products = [
   {
     title: "VIBRATION",
     description: `life and living all not equal
@@ -75,12 +65,9 @@ interface TextPosition {
   rotate: number;
 }
 
-interface VibrationProps {
-  id: number;
-}
-
-export default function Vibration({ id }: VibrationProps) {
+export default function Vibration({ id }: any) {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [current, setCurrent] = useState(-1);
   const [start, setStart] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isEntering, setIsEntering] = useState(false); // New state for entering animation
@@ -96,14 +83,14 @@ export default function Vibration({ id }: VibrationProps) {
   const [dark, setDark] = useState(true);
 
   // Updated to have unique keys for each image set
-  const images = products.map((product: Product, index: number) => {
+  const images = products.map((product, index) => {
     const controls5 = useAnimation();
     const controls6 = useAnimation();
     const controls7 = useAnimation();
     const handleImageClick = async (
-      currentControl: AnimationControls,
-      lowerControl: AnimationControls,
-      higherControl: AnimationControls
+      currentControl: any,
+      lowerControl: any,
+      higherControl: any
     ) => {
       await currentControl.start({
         left: ["0%", "-100%"],
@@ -180,6 +167,7 @@ export default function Vibration({ id }: VibrationProps) {
       const scrollPosition = 1 - rect.bottom / rect.height + 0.17;
 
       // Dynamically calculate scroll thresholds based on number of products
+      const sectionHeight = window.innerHeight / products.length;
 
       for (let i = 0; i < products.length; i++) {
         const lowerBound = i * (1 / products.length) + 0.08 * i;
@@ -221,6 +209,7 @@ export default function Vibration({ id }: VibrationProps) {
       start &&
       !knowMore
     ) {
+      setCurrent(activeIndex);
       window.scrollTo({
         top: activeIndex * 435 + 150, // Adjust this value based on your layout
       });
@@ -292,7 +281,7 @@ export default function Vibration({ id }: VibrationProps) {
         zIndex: 40,
       });
     } else {
-      const pos = [22, 8, 16, 14, 5, 14, 22];
+      let pos = [22, 8, 16, 14, 5, 14, 22];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",
@@ -348,7 +337,7 @@ export default function Vibration({ id }: VibrationProps) {
   }, [activeIndex, start, knowMore, products.length]);
 
   // Calculate dynamic container height based on number of products
-  // 570px per product + 200px buffer
+  const containerHeight = products.length * 570 + 200; // 570px per product + 200px buffer
 
   return (
     <>

@@ -1,7 +1,7 @@
 import NextVideo from "next-video";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import localFont from "next/font/local";
@@ -33,7 +33,7 @@ export default function Vibration2({ dark, setDark, idd }: any) {
     };
   }, [router]);
 
-  const products: (string | JSX.Element)[][] = [
+  const products = [
     [
       "/images/0/video.mp4",
       "A table inspired by the Art Deco era, celebrating the fusion of craftsmanship and modernity. The piece features intricate gold inlay work as its centerpiece, symbolizing the opulence and geometric precision characteristic of the 1920s and 1930s. It aims to capture the spirit of luxury, optimism, and technological progress that defined this vibrant period in design history.",
@@ -147,7 +147,7 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
 The creation process involved extensive experimentation with various materials, including specially treated woods, resins, and metal inlays, to achieve the desired visual effect. The designer collaborated with optical experts to understand the physics of chatoyancy and with master craftsmen to develop techniques that could replicate this effect on a larger scale.`,
     ],
   ];
-  const p: any = products[Number(id) || idd];
+  const [p, setP] = useState<any>(products[Number(id) || idd]);
 
   return (
     <ParallaxProvider>

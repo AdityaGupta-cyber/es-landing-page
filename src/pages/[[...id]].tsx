@@ -13,17 +13,15 @@ export default function Home() {
   const [intro, setIntro] = useState(true);
   const controls2 = useAnimation();
   const router = useRouter();
-  const { id } = router.query;
+  const { id }: any = router.query;
 
   const sectionRef2 = useRef<HTMLDivElement>(null);
-  const [scrollY, setScrollY] = useState(0);
 
   // Handle scroll event
   const handleScroll = () => {
     ////console.log(scrollY);
     const scrollPosition = window.scrollY;
     ////console.log(window.scrollY);
-    setScrollY(scrollPosition);
 
     if (scrollPosition == 0) {
       // Change 100 to the scroll position where you want the animation to trigger

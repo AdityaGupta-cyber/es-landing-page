@@ -1,6 +1,11 @@
 "use client";
 
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useAnimation,
+  AnimationControls,
+} from "framer-motion";
 import localFont from "next/font/local";
 import { useState, useEffect, useRef } from "react";
 import Vibration2 from "./Vibration2";
@@ -10,7 +15,12 @@ const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
 });
 
-const products = [
+interface Product {
+  title: string;
+  description: string;
+}
+
+const products: Product[] = [
   {
     title: "VIBRATION",
     description: `life and living all not equal
@@ -65,9 +75,12 @@ interface TextPosition {
   rotate: number;
 }
 
-export default function Vibration({ id }: any) {
+interface VibrationProps {
+  id: number;
+}
+
+export default function Vibration({ id }: VibrationProps) {
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [current, setCurrent] = useState(-1);
   const [start, setStart] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isEntering, setIsEntering] = useState(false); // New state for entering animation
@@ -83,14 +96,14 @@ export default function Vibration({ id }: any) {
   const [dark, setDark] = useState(true);
 
   // Updated to have unique keys for each image set
-  const images = products.map((product, index) => {
+  const images = products.map((product: Product, index: number) => {
     const controls5 = useAnimation();
     const controls6 = useAnimation();
     const controls7 = useAnimation();
     const handleImageClick = async (
-      currentControl: any,
-      lowerControl: any,
-      higherControl: any
+      currentControl: AnimationControls,
+      lowerControl: AnimationControls,
+      higherControl: AnimationControls
     ) => {
       await currentControl.start({
         left: ["0%", "-100%"],
@@ -167,19 +180,18 @@ export default function Vibration({ id }: any) {
       const scrollPosition = 1 - rect.bottom / rect.height + 0.17;
 
       // Dynamically calculate scroll thresholds based on number of products
-      const sectionHeight = window.innerHeight / products.length;
 
       for (let i = 0; i < products.length; i++) {
         const lowerBound = i * (1 / products.length) + 0.08 * i;
         const upperBound = (i + 1) * (1 / products.length) - 0.08 * i;
-        console.log(lowerBound, upperBound);
+
         if (
           scrollPosition > lowerBound &&
           scrollPosition <= upperBound &&
           !knowMore
         ) {
           window.scrollTo({
-            top: i * 440 + 150, // Adjust this value based on your layout
+            top: i * 435 + 150, // Adjust this value based on your layout
           });
           setActiveIndex(i);
           break;
@@ -209,7 +221,6 @@ export default function Vibration({ id }: any) {
       start &&
       !knowMore
     ) {
-      setCurrent(activeIndex);
       window.scrollTo({
         top: activeIndex * 435 + 150, // Adjust this value based on your layout
       });
@@ -355,7 +366,20 @@ export default function Vibration({ id }: any) {
             !dark ? "#433631" : "#FBFEF9"
           }] flex flex-col p-1 overflow-hidden duration-1000`}
         >
-          <main className="flex-grow flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
+          {" "}
+          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-5">
+            <AnimatePresence>
+              <motion.img
+                className="object-cover w-full absolute bottom-0"
+                key={activeIndex}
+                src={`/images/${activeIndex}/1.png`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              />
+            </AnimatePresence>
+          </div>
+          <main className="flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
             <div
               className={`${
                 knowMore ? "mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"

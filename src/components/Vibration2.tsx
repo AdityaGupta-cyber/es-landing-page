@@ -33,7 +33,7 @@ export default function Vibration2({ dark, setDark, idd }: any) {
     };
   }, [router]);
 
-  const products = [
+  const products: (string | JSX.Element)[][] = [
     [
       "/images/0/video.mp4",
       "A table inspired by the Art Deco era, celebrating the fusion of craftsmanship and modernity. The piece features intricate gold inlay work as its centerpiece, symbolizing the opulence and geometric precision characteristic of the 1920s and 1930s. It aims to capture the spirit of luxury, optimism, and technological progress that defined this vibrant period in design history.",
@@ -147,7 +147,7 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
 The creation process involved extensive experimentation with various materials, including specially treated woods, resins, and metal inlays, to achieve the desired visual effect. The designer collaborated with optical experts to understand the physics of chatoyancy and with master craftsmen to develop techniques that could replicate this effect on a larger scale.`,
     ],
   ];
-  const [p, setP] = useState<any>(products[Number(id) || idd]);
+  const p: any = products[Number(id) || idd];
 
   return (
     <ParallaxProvider>
@@ -209,7 +209,7 @@ The creation process involved extensive experimentation with various materials, 
           >
             {p[5]}
           </h3>
-          <p className={`text-lg tracking-widest ${GS.className}`}>
+          <p className={`text-lg font-normal tracking-widest ${GS.className}`}>
             EKANT SINGH
           </p>
         </section>

@@ -198,14 +198,8 @@ function RightColumn() {
           mortal.
           <br />
           <br /> No matter, we remain or are forgotten but our art would
-          flourish and remain
+          flourish and remain.
           <br /> <br />
-          Your voice would bring back you from heaven to every time he strenuous
-          pain, though you will never know when your eyes drown into darkness
-          and your face is buried under the sand, and you will never know when
-          an insect would come creeping and eat you away But, even after years,
-          your labelled and released, soul would witness that your art still
-          stays.
         </p>
       </div>
     </div>

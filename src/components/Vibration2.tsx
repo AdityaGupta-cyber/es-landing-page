@@ -180,76 +180,79 @@ The creation process involved extensive experimentation with various materials, 
             />
           </div>
 
-          <div className="flex gap-40 justify-start mt-32">
+          {/*} <div className="flex gap-40 justify-start mt-32">
             <p className="text-4xl uppercase tracking-widest mt-0 w-[400px]">
               ART DIRECTION
             </p>
             <p className="font-sans uppercase w-[400px] text-left">{p[3]}</p>
           </div>
-        </section>
+        </section>*/}
 
-        <section className="min-w-screen">
-          <div className="relative mb-4 -ml-[150px] w-screen">
-            <ParallaxBanner
-              onMouseEnter={() => {
-                if (!dark) {
-                  setDark(true);
-                }
-              }}
-              className="para"
-              style={{ aspectRatio: "2 / 1" }}
-              layers={[{ image: p[4], speed: -30 }]}
-            />
-          </div>
-        </section>
+          <section className="min-w-screen">
+            <div className="relative mb-4 -ml-[150px] w-screen">
+              <ParallaxBanner
+                onMouseEnter={() => {
+                  if (!dark) {
+                    setDark(true);
+                  }
+                }}
+                className="para"
+                style={{ aspectRatio: "2 / 1" }}
+                layers={[{ image: p[4], speed: -30 }]}
+              />
+            </div>
+          </section>
 
-        <section className="-ml-[70px] my-40 text-center">
-          <h3
-            className={`${CR.className} text-5xl font-light leading-snug mb-4 uppercase`}
-          >
-            {p[5]}
-          </h3>
-          <p className={`text-lg font-normal tracking-widest ${GS.className}`}>
-            EKANT SINGH
-          </p>
-        </section>
+          <section className="-ml-[70px] my-40 text-center">
+            <h3
+              className={`${CR.className} text-5xl font-light leading-snug mb-4 uppercase`}
+            >
+              {p[5]}
+            </h3>
+            <p
+              className={`text-lg font-normal tracking-widest ${GS.className}`}
+            >
+              EKANT SINGH
+            </p>
+          </section>
 
-        <section className="-ml-20 mb-24 grid grid-cols-2 gap-4">
-          <div className="relative aspect-[4/5.1]">
-            <Image
-              src={p[6]}
-              alt="Elegant table in a luxurious setting"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <div className="relative aspect-[4/2.5]">
+          <section className="-ml-20 mb-24 grid grid-cols-2 gap-4">
+            <div className="relative aspect-[4/5.1]">
               <Image
-                src={p[7]}
-                alt="Close-up of a wooden table with intricate design"
+                src={p[6]}
+                alt="Elegant table in a luxurious setting"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-            <div className="relative aspect-[4/2.5]">
-              <Image
-                src={p[8]}
-                alt="Close-up of a wooden table with intricate design"
-                layout="fill"
-                objectFit="cover"
-              />
+            <div className="flex flex-col gap-5">
+              <div className="relative aspect-[4/2.5]">
+                <Image
+                  src={p[7]}
+                  alt="Close-up of a wooden table with intricate design"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="relative aspect-[4/2.5]">
+                <Image
+                  src={p[8]}
+                  alt="Close-up of a wooden table with intricate design"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mb-24">
+          {/*<section className="mb-24">
           <div className="-ml-[70px] flex gap-10 justify-center flex-col mt-40 align-middle items-center text-center">
             <p className="text-4xl uppercase tracking-widest mt-2 w-[700px] overflow-hidden">
               STORY
             </p>
             <p className="font-sans uppercase w-[700px]">{p[9]}</p>
           </div>
+        </section>*/}
         </section>
       </main>
     </ParallaxProvider>

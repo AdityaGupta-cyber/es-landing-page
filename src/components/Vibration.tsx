@@ -81,6 +81,24 @@ export default function Vibration({ id }: any) {
   const [screenSize, setScreenSize] = useState("large");
   const [rotation, setRotation] = useState(0);
   const [dark, setDark] = useState(true);
+  function stopTouchScroll() {
+    // Prevent the default touchmove event to stop scrolling
+    sectionRef.current?.addEventListener(
+      "touchstart",
+      function (event) {
+        event.preventDefault(); // Stops scrolling on touch interaction
+      },
+      { passive: false }
+    );
+
+    sectionRef.current?.addEventListener(
+      "touchmove",
+      function (event) {
+        event.preventDefault(); // Prevent momentum scroll during touch move
+      },
+      { passive: false }
+    );
+  }
 
   // Updated to have unique keys for each image set
   const images = products.map((product, index) => {
@@ -145,6 +163,10 @@ export default function Vibration({ id }: any) {
   const containerSize = radius * 2 + 56;
 
   // Handle image click to manage zIndex and animation
+
+  useEffect(() => {
+    stopTouchScroll();
+  }, [activeIndex]);
 
   useEffect(() => {
     if (id && activeIndex !== id && !knowMore) {
@@ -250,7 +272,7 @@ export default function Vibration({ id }: any) {
     );
     setIsKnowMore(true);
     setTimeout(() => {
-      setDark(false);
+      setDark(true);
       setKnowMore(true);
       window.scrollTo({
         top: 10,

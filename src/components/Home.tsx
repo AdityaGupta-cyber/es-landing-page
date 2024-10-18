@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import localFont from "next/font/local";
 import { useState, useEffect, useRef } from "react";
-import Vibration2 from "./Vibration2";
+import CaseStudy from "./CaseStudy";
 import Navbar from "./Navbar";
 
 const BlackMango = localFont({
@@ -65,7 +65,7 @@ interface TextPosition {
   rotate: number;
 }
 
-export default function Vibration({ id }: any) {
+export default function Home({ id }: any) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [current, setCurrent] = useState(-1);
   const [start, setStart] = useState(false);
@@ -427,7 +427,7 @@ export default function Vibration({ id }: any) {
                 </AnimatePresence>
                 {knowMore ? (
                   <div className="relative flex justify-center">
-                    <Vibration2
+                    <CaseStudy
                       dark={dark}
                       setDark={setDark}
                       idd={activeIndex}

@@ -13,7 +13,7 @@ const GS = localFont({
   src: "../pages/fonts/GS.ttf",
 });
 
-export default function Vibration2({ dark, setDark, idd }: any) {
+export default function CaseStudy({ dark, setDark, idd }: any) {
   const router = useRouter();
   const { id } = router.query;
 

@@ -4,10 +4,10 @@ import LogoAnimation from "@/components/LogoAnimation";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import LogoAnimation2 from "@/components/LogoAnimation2";
-import Vibration from "@/components/Vibration";
+import Home from "@/components/Home";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Page() {
   const controls = useAnimation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [intro, setIntro] = useState(true);
@@ -123,7 +123,7 @@ export default function Home() {
         </>
       )}
 
-      <Vibration id={id} />
+      <Home id={id} />
     </>
   );
 }

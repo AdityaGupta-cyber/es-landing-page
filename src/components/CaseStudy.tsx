@@ -153,7 +153,7 @@ The creation process involved extensive experimentation with various materials, 
     <ParallaxProvider>
       <main className="max-w-full w-full px-4 mt-10">
         <section className="mb-24">
-          <div className="-ml-[70px]">
+          <div className=" -ml-2  lg:-ml-[70px]">
             <NextVideo
               src={p[0]}
               autoPlay
@@ -163,11 +163,11 @@ The creation process involved extensive experimentation with various materials, 
               controls={false}
             />
           </div>
-          <div className="flex gap-40 justify-start mt-40">
-            <p className="text-4xl uppercase tracking-widest mt-2 w-[400px]">
+          <div className=" w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40">
+            <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
-            <p className="font-sans uppercase w-[400px] text-left">{p[1]}</p>
+            <p className=" font-sans normal-case  w-full md:w-[46%] lg:w-[50%] text-left text-sm md:text-lg lg:text-2xl">{p[1]}</p>
           </div>
         </section>
 
@@ -189,7 +189,7 @@ The creation process involved extensive experimentation with various materials, 
         </section>*/}
 
           <section className="min-w-screen">
-            <div className="relative mb-4 -ml-[150px] w-screen">
+            <div className="relative mb-4 -ml-9 md:-ml-11 lg:-ml-[150px] w-screen">
               <ParallaxBanner
                 onMouseEnter={() => {
                   if (!dark) {
@@ -203,14 +203,14 @@ The creation process involved extensive experimentation with various materials, 
             </div>
           </section>
 
-          <section className="-ml-[70px] my-40 text-center">
+          <section className="  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
             <h3
-              className={`${CR.className} text-5xl font-light leading-snug mb-4 uppercase`}
+              className={`${CR.className} text-xl md:text-3xl lg:text-5xl font-light leading-snug mb-4 uppercase`}
             >
               {p[5]}
             </h3>
             <p
-              className={`text-lg font-normal tracking-widest ${GS.className}`}
+              className={`text-sm md:text-lg font-normal tracking-widest ${GS.className}`}
             >
               EKANT SINGH
             </p>

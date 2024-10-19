@@ -210,7 +210,7 @@ function RightColumn() {
 function LeftColumn() {
   return (
     <div className="hidden md:block w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-4 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
-      <ScrollPlayVideo src="/about.mp4" />
+      <ScrollPlayVideo src="/aboutpic.mp4" />
     </div>
   );
 }
@@ -218,7 +218,7 @@ function LeftColumn() {
 function MobColumn() {
   return (
     <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
-      <ScrollPlayVideo src="/about.mp4" />
+      <ScrollPlayVideo src="/aboutpic.mp4" />
     </div>
   );
 }
@@ -231,5 +231,4 @@ function Footer() {
     </footer>
   );
 }
-
 

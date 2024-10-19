@@ -121,7 +121,8 @@ function MainContent() {
           className="hidden md:block w-[20px] h-auto object-cover my-8 pt-20 -mt-[600px] lg:-mt-[950px]"
         />
         <RightColumn />
-      </div>
+        <MobColumn />
+       </div>
     </main>
   );
 }
@@ -129,7 +130,7 @@ function MainContent() {
 function RightColumn() {
   return (
     <div className="md:-mt-[500px] lg:-mt-[800px]">
-      <h2 className={`text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}>
+      <h2 className={`text-3xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}>
         EYES OF IMAGINATION
       </h2>
       <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] uppercase float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
@@ -146,7 +147,7 @@ function RightColumn() {
         layers={[{ image: "/about1.png", speed: -10 }]}
       />
       <h2
-        className={`text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+        className={`text-3xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
@@ -181,7 +182,7 @@ function RightColumn() {
       </div>
       <div className="pb-10 md:pb-[100px] lg:pb-[135px] flex justify-center text-center flex-col items-center">
         <h2
-          className={`text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+          className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
         >
           YOU LIVE AFTER <br />
           YOU DIE
@@ -208,11 +209,20 @@ function RightColumn() {
 
 function LeftColumn() {
   return (
-    <div className="w-full md:w-[400px] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-4 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
+    <div className="hidden md:block w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-4 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
       <ScrollPlayVideo src="/about.mp4" />
     </div>
   );
 }
+
+function MobColumn() {
+  return (
+    <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
+      <ScrollPlayVideo src="/about.mp4" />
+    </div>
+  );
+}
+
 
 function Footer() {
   return (
@@ -221,3 +231,5 @@ function Footer() {
     </footer>
   );
 }
+
+

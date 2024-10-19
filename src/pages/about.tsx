@@ -130,7 +130,7 @@ function MainContent() {
 function RightColumn() {
   return (
     <div className="md:-mt-[500px] lg:-mt-[800px]">
-      <h2 className={`text-3xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}>
+      <h2 className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}>
         EYES OF IMAGINATION
       </h2>
       <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] uppercase float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
@@ -147,7 +147,7 @@ function RightColumn() {
         layers={[{ image: "/about1.png", speed: -10 }]}
       />
       <h2
-        className={`text-3xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+        className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>

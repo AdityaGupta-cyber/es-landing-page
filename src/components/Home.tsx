@@ -378,10 +378,10 @@ export default function Home({ id }: any) {
           }] flex flex-col p-1 overflow-hidden duration-1000`}
         >
           {" "}
-          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-45  md:opacity-5">
+          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-45  lg:opacity-5">
             <AnimatePresence>
               <motion.img
-                className="object-cover md:w-full w-[120%] absolute bottom-0 md:rotate-0 rotate-[-18deg]"
+                className="object-cover lg:w-full w-[120%] absolute bottom-0 lg:rotate-0 rotate-[-18deg] "
                 key={activeIndex}
                 src={`/images/${activeIndex}/1.png`}
                 initial={{ opacity: 0 }}
@@ -397,7 +397,8 @@ export default function Home({ id }: any) {
               } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-44`}
             >
               <div className="  w-full mt-16 lg:mt-0">
-                <AnimatePresence>
+                
+                  <AnimatePresence>
                   <motion.div
                     className="  text-sm overflow-hidden md:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
                     animate={controls3}
@@ -425,6 +426,8 @@ export default function Home({ id }: any) {
                     )}
                   </motion.div>
                 </AnimatePresence>
+               
+                
                 {knowMore ? (
                   <div className="relative flex justify-center">
                     <CaseStudy

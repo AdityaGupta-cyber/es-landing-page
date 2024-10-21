@@ -378,14 +378,14 @@ export default function Home({ id }: any) {
           }] flex flex-col p-1 overflow-hidden duration-1000`}
         >
           {" "}
-          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-5">
+          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-45  md:opacity-5">
             <AnimatePresence>
               <motion.img
-                className="object-cover w-full absolute bottom-0"
+                className="object-cover md:w-full w-[120%] absolute bottom-0 md:rotate-0 rotate-[-18deg]"
                 key={activeIndex}
                 src={`/images/${activeIndex}/1.png`}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ opacity: 1 } }
                 exit={{ opacity: 0 }}
               />
             </AnimatePresence>
@@ -399,7 +399,7 @@ export default function Home({ id }: any) {
               <div className="w-full mb-8 lg:mb-0">
                 <AnimatePresence>
                   <motion.div
-                    className="text-4xl overflow-hidden sm:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
+                    className=" text-purple-800 text-4xl overflow-hidden sm:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
                     animate={controls3}
                     initial={{ scale: 1, position: "relative", x: 0, y: 0 }}
                     exit={{
@@ -418,7 +418,7 @@ export default function Home({ id }: any) {
                           isTransitioning ? "transition-out" : ""
                         } ${
                           isEntering ? "transition-in" : ""
-                        } text-4xl overflow-hidden origin-center sm:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words`}
+                        } text-4xl overflow-hidden origin-center  sm:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words`}
                       >
                         {products[activeIndex]?.title}
                       </h2>
@@ -450,12 +450,12 @@ export default function Home({ id }: any) {
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      } mb-6 max-w-md lg:text-xs xl:text-sm sm:text-sm leading-relaxed font-sans text-[#FBFEF9CC] uppercase`}
+                      } mb-6 max-w-md lg:text-xs xl:text-sm sm:text-xs leading-relaxed font-sans text-[#FBFEF9CC] uppercase`}
                     >
                       {products[activeIndex]?.description}
                     </h2>
                     <button
-                      className="inline-block font-semibold text-sm sm:text-base border border-[#ff6b35] text-[#FBFEF9] px-4 sm:px-6 py-2 rounded-full hover:bg-[#ff6b35] hover:text-white transition-colors tracking-wider"
+                      className="inline-block font-semibold text-sm sm:text-sm border border-[#ff6b35] text-[#FBFEF9] px-4 sm:px-6 py-2 rounded-full hover:bg-[#ff6b35] hover:text-white transition-colors tracking-wider"
                       onClick={handleKnowMore}
                     >
                       KNOW MORE

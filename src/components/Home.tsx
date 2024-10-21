@@ -66,6 +66,37 @@ interface TextPosition {
 }
 
 export default function Home({ id }: any) {
+
+  const [isMd, setIsMd] = useState(false);
+  const [isSm, setIsSm] = useState(false);
+
+  useEffect(() => {
+    // Define media queries for 'sm' and 'md' screen sizes
+    const mdQuery = window.matchMedia('(min-width: 768px)');
+    const smQuery = window.matchMedia('(max-width: 640px)');
+
+    // Handlers to update state when media queries change
+    const handleMdChange = (e) => setIsMd(e.matches);
+    const handleSmChange = (e) => setIsSm(e.matches);
+
+    // Set initial value
+    setIsMd(mdQuery.matches);
+    setIsSm(smQuery.matches);
+
+    // Add event listeners
+    mdQuery.addListener(handleMdChange);
+    smQuery.addListener(handleSmChange);
+
+    // Cleanup
+    return () => {
+      mdQuery.removeListener(handleMdChange);
+      smQuery.removeListener(handleSmChange);
+    };
+  }, []);
+
+
+
+
   const [activeIndex, setActiveIndex] = useState(-1);
   const [current, setCurrent] = useState(-1);
   const [start, setStart] = useState(false);
@@ -378,10 +409,10 @@ export default function Home({ id }: any) {
           }] flex flex-col p-1 overflow-hidden duration-1000`}
         >
           {" "}
-          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-45  lg:opacity-5">
+          <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-5">
             <AnimatePresence>
               <motion.img
-                className="object-cover lg:w-full w-[120%] absolute bottom-0 lg:rotate-0 rotate-[-18deg] "
+                className="object-cover w-full absolute bottom-0 rotate-0  "
                 key={activeIndex}
                 src={`/images/${activeIndex}/1.png`}
                 initial={{ opacity: 0 }}
@@ -394,7 +425,7 @@ export default function Home({ id }: any) {
             <div
               className={`${
                 knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
-              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-44`}
+              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-64`}
             >
               <div className="  w-full mt-16 lg:mt-0">
                 
@@ -453,7 +484,7 @@ export default function Home({ id }: any) {
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      }  mb-6 max-w-md lg:text-xs xl:text-sm text-xs leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase`}
+                      }  mb-6 max-w-md lg:text-sm xl:text-sm text-xs leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase`}
                     >
                       {products[activeIndex]?.description}
                     </h2>
@@ -467,12 +498,18 @@ export default function Home({ id }: any) {
                 )}
               </div>
               {!knowMore && (
-                <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible lg:mt-20 xl:-mt-10">
+                <div className="  sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible lg:mt-20 xl:-mt-10">
                   <div
                     className="relative"
-                    style={{
-                      width: `${containerSize}px`,
-                      height: `${containerSize}px`,
+                    
+                    // style={{
+                    //   width: `${containerSize}px`,
+                    //   height: `${containerSize}px`,
+                    // }}
+
+                    style = {{
+                      width: isMd ? '90%' : isSm? '98%' : `${containerSize}px`,
+                      height: isMd ? 'auto' : isSm? 'auto' : `${containerSize}px`, 
                     }}
                   >
                     {images.map((imageComponent, index) => {
@@ -480,11 +517,13 @@ export default function Home({ id }: any) {
                         calculatePosition(index);
 
                       return (
+                        <div>
+                        
                         <div
                           key={index}
-                          className="absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
+                          className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
                           style={{
-                            left: `${x - 150}px`,
+                            left: `${x - 500}px`,
                             top: `${y}px`,
                             opacity,
                             transform: `rotate(${rotate}deg)`,
@@ -492,6 +531,40 @@ export default function Home({ id }: any) {
                         >
                           {imageComponent}
                         </div>
+
+
+                        
+                          <div
+                          key={index}
+                          className=" block lg:hidden  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
+                          // style={{
+                          //    left: `${x + 140}px`,
+                          //   top: `${y - 130  }px`,
+                          //   opacity,
+                          //   transform: `rotate(${rotate}deg)`,
+                          // }}
+
+                          style = {{
+                            left: isMd ? `${x + 140}px` : isSm ? `${x + 20}px` : `${x + 140}px`,
+                            top: isMd ? `${y - 130}px` : isSm ? `${y - 130}px` : `${y - 130}px`,
+                            opacity,
+                            transform: `rotate(${rotate}deg)`,
+                          }}
+
+
+
+                        >{imageComponent}
+                          {/* <div className="   w-[30%] h-6 mx-auto">
+                             
+                          </div> */}
+                         
+                        </div>
+                        </div>
+                        
+
+
+
+                        
                       );
                     })}
                   </div>

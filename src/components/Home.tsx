@@ -390,16 +390,16 @@ export default function Home({ id }: any) {
               />
             </AnimatePresence>
           </div>
-          <main className="flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
+          <main className="  flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
             <div
               className={`${
-                knowMore ? "mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
+                knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
               } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-44`}
             >
-              <div className="w-full mb-8 lg:mb-0">
+              <div className="  w-full mt-16 lg:mt-0">
                 <AnimatePresence>
                   <motion.div
-                    className=" text-purple-800 text-4xl overflow-hidden sm:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
+                    className="  text-sm overflow-hidden md:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
                     animate={controls3}
                     initial={{ scale: 1, position: "relative", x: 0, y: 0 }}
                     exit={{
@@ -418,7 +418,7 @@ export default function Home({ id }: any) {
                           isTransitioning ? "transition-out" : ""
                         } ${
                           isEntering ? "transition-in" : ""
-                        } text-4xl overflow-hidden origin-center  sm:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words`}
+                        } text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words `}
                       >
                         {products[activeIndex]?.title}
                       </h2>
@@ -444,13 +444,13 @@ export default function Home({ id }: any) {
 
                     <h2
                       style={{
-                        fontWeight: 400,
+                        fontWeight: 300, 
                       }}
                       className={`ease-in-out title ${
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      } mb-6 max-w-md lg:text-xs xl:text-sm sm:text-xs leading-relaxed font-sans text-[#FBFEF9CC] uppercase`}
+                      }  mb-6 max-w-md lg:text-xs xl:text-sm text-xs leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase`}
                     >
                       {products[activeIndex]?.description}
                     </h2>

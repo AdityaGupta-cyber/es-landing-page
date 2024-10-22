@@ -82,7 +82,7 @@ export default function Page() {
                   playsInline
                   controls={false}
                   currentTime={2000}
-                  className="absolute top-[65%]"
+                  className="absolute top-[50%] md:top-[65%] h-screen md:h-auto"
                 ></BackgroundVideo>
               )}
             </motion.div>
@@ -115,7 +115,7 @@ export default function Page() {
                   playsInline
                   controls={false}
                   currentTime={2000}
-                  className="absolute -top-[35%]"
+                  className="absolute -top-[50%] md:-top-[35%] md:h-auto h-screen"
                 ></BackgroundVideo>
               )}
             </motion.div>

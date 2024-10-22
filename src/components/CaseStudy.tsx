@@ -167,7 +167,9 @@ The creation process involved extensive experimentation with various materials, 
             <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
-            <p className=" font-sans normal-case  w-full md:w-[46%] lg:w-[50%] text-left text-sm md:text-lg lg:text-2xl">{p[1]}</p>
+            <p className=" font-sans font-light normal-case  w-full md:w-[46%] lg:w-[50%] text-left text-sm md:text-lg lg:text-2xl">
+              {p[1]}
+            </p>
           </div>
         </section>
 

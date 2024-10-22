@@ -38,8 +38,8 @@ body {
 /* Apply the animation to the video */
 .front video {
   opacity: 0;
-  animation: fadeIn 4s ease-in forwards;
-  animation-delay: 4s; /* 3s for slow fade-in */
+  animation: fadeIn 5s ease-in forwards;
+  /* 3s for slow fade-in */
 }
 
 .box::before,

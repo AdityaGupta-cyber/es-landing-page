@@ -122,7 +122,7 @@ function MainContent() {
         />
         <RightColumn />
         <MobColumn />
-       </div>
+      </div>
     </main>
   );
 }
@@ -130,10 +130,12 @@ function MainContent() {
 function RightColumn() {
   return (
     <div className="md:-mt-[500px] lg:-mt-[800px]">
-      <h2 className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}>
+      <h2
+        className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
+      >
         EYES OF IMAGINATION
       </h2>
-      <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] uppercase float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
         Ekant Singh envision THE world where his thoughts IDEATE THE
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
@@ -151,7 +153,7 @@ function RightColumn() {
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
-      <p className="mb-6 text-xs xl:text-sm uppercase max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
         I{"'"}ve always had an insatiable appetite for turning the unusual into
         art. As an industrial designer, I see potential in materials others
         might overlook. My vision pushes me to transcend conventional design
@@ -187,7 +189,7 @@ function RightColumn() {
           YOU LIVE AFTER <br />
           YOU DIE
         </h2>
-        <p className="mb-6 text-xs xl:text-sm uppercase max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+        <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
           If you{"'"}ve written your love from the heart and you really mean the
           words that you have written then no matter you remain or depart, your
           picture of words would never be forgotten.
@@ -223,7 +225,6 @@ function MobColumn() {
   );
 }
 
-
 function Footer() {
   return (
     <footer className="mt-12 text-center text-sm text-gray-400">
@@ -231,4 +232,3 @@ function Footer() {
     </footer>
   );
 }
-

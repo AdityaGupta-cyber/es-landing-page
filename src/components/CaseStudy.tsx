@@ -56,7 +56,7 @@ export default function CaseStudy({ dark, setDark, idd }: any) {
       "/images/1/4.png",
       "Create a striking chair design that blends Baroque extravagance with contemporary ergonomics. Use a deep, rich red velvet for the upholstery, reminiscent of royal chambers and theater curtains. The gold metalwork should feature elaborate, curving forms typical of Baroque design, but streamlined for a modern touch. Consider incorporating motifs like acanthus leaves, shells, or scrollwork in the gold elements. The chair's form should be generous and inviting, with plush cushioning that promises extreme comfort.",
       "/images/1/5.png",
-      "attraction and have there own defination security and saftey posses there own reason",
+      "Attraction can have their own definition, security and safety possess their own reason.",
       "/images/1/6.png",
       "/images/1/7.png",
       "/images/1/8.png",
@@ -72,8 +72,7 @@ Would you like to explore any specific aspects of this chair design further? Per
       "/images/2/4.png",
       "Create an innovative coffee table design that captures the dynamic, flowing forms of a flower garden in full bloom. Use a combination of materials to represent different elements of a garden landscap",
       "/images/2/5.png",
-      `attraction and have there own defination
-security and saftey posses there own reason`,
+      `Attraction can have their own definition, security and safety possess their own reason.`,
       "/images/2/6.png",
       "/images/2/7.png",
       "/images/2/8.png",
@@ -120,8 +119,8 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Design an imposing table that echoes the Colosseum's circular structure. Use rich, warm tones in the wood to evoke ancient Rome, contrasting with the sleek glass top. Incorporate intricate carvings on the ash wood pillars to mimic the Colosseum's decorative elements. The overall aesthetic should balance monumental presence with refined elegance, capturing both the Colosseum's scale and its detailed artistry.",
       "/images/5/5.png",
       <>
-        attraction and have there own defination security and saftey posses
-        there own reason
+        Attraction can have their own definition, security and safety possess
+        their own reason.
       </>,
 
       "/images/5/6.png",

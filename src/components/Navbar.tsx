@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Menu from "./Menu";
 import { useState } from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
 });
@@ -41,7 +42,13 @@ export default function Navbar({ dark }: any) {
           <h1
             className={`text-[#ff6b35] text-xl ${BlackMango.className} tracking-wider overflow-hidden`}
           >
-            EKANT SINGH
+            <Image
+              src="/logo1.png"
+              width="150"
+              height="150"
+              className="-mt-5"
+              alt=""
+            />
           </h1>
         </header>
         <AnimatePresence>

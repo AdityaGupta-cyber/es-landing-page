@@ -151,7 +151,7 @@ export default function Home({ id }: any) {
     return (
       <div
         key={index}
-        className="relative overflow-visible h-[300px] w-[300px]  md:h-[80vh] z-10 md:w-[38vw] cursor-pointer"
+        className="relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[450px]  ml-10 md:ml-0 md:mt-0"
       >
         <motion.img
           src={`/images/${index}/3.png`}
@@ -190,10 +190,6 @@ export default function Home({ id }: any) {
   const containerSize = radius * 2 + 56;
 
   // Handle image click to manage zIndex and animation
-
-  useEffect(() => {
-    stopTouchScroll();
-  }, [activeIndex]);
 
   useEffect(() => {
     if (id && activeIndex !== id && !knowMore) {
@@ -386,7 +382,7 @@ export default function Home({ id }: any) {
   }, [activeIndex, start, knowMore, products.length]);
 
   // Calculate dynamic container height based on number of products
-  const containerHeight = products.length * 570 + 200; // 570px per product + 200px buffer
+  const containerHeight = products.length * 440 + 150; // 570px per product + 200px buffer
 
   return (
     <>
@@ -402,7 +398,7 @@ export default function Home({ id }: any) {
             !dark ? "#FBFEF9" : "#433631"
           }] text-[${
             !dark ? "#433631" : "#FBFEF9"
-          }] flex flex-col p-1 overflow-hidden duration-1000`}
+          }] flex flex-col p-1 overflow-hidden duration-1000 xl:items-center`}
         >
           {" "}
           <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-5">
@@ -417,11 +413,11 @@ export default function Home({ id }: any) {
               />
             </AnimatePresence>
           </div>
-          <main className="  flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
+          <main className="flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[1500px] lg:mx-10 xl:ml-20">
             <div
               className={`${
                 knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
-              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-64`}
+              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-[500px]`}
             >
               <div className="  w-full mt-16 lg:mt-0">
                 <AnimatePresence>
@@ -445,7 +441,7 @@ export default function Home({ id }: any) {
                           isTransitioning ? "transition-out" : ""
                         } ${
                           isEntering ? "transition-in" : ""
-                        } text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words `}
+                        } text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[450px] xl:w-[580px] break-normal`}
                       >
                         {products[activeIndex]?.title}
                       </h2>
@@ -479,7 +475,7 @@ export default function Home({ id }: any) {
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      }  mb-6 max-w-md leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase`}
+                      }  mb-6 max-w-md leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase mt-[250px] md:mt-0`}
                     >
                       {products[activeIndex]?.description}
                     </h2>
@@ -493,7 +489,7 @@ export default function Home({ id }: any) {
                 )}
               </div>
               {!knowMore && (
-                <div className="sticky mr-[200px] lg:-right-40 lg:ml-56 xl:mr-20 xl:-right-10 overflow-visible lg:-mt-[400px] xl:-mt-[500px]">
+                <div className="sticky mr-[200px] lg:-right-40 lg:ml-56 xl:mr-20 xl:-right-10 overflow-visible md:mb-40 lg:mb-0 lg:-mt-[300px] xl:-mt-[500px]">
                   <div
                     className="relative"
                     // style={{

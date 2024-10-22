@@ -18,7 +18,7 @@ const LogoAnimation2: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center ">
-      <div className="relative w-[650px] z-10 h-[100px] overflow-y-hidden">
+      <div className="relative w-[200px] h-[100px] md:w-[650px] z-10 md:h-[100px] overflow-y-hidden">
         <svg
           width="1344"
           height="148"
@@ -83,7 +83,7 @@ const LogoAnimation2: React.FC = () => {
           height="209"
           viewBox="0 0 997 209"
           fill="none"
-          className="logo2 absolute top-7 left-[15%] w-[450px] h-auto"
+          className="logo2 absolute top-2 md:top-7 left-[15%] w-[140px] md:w-[450px] h-auto"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

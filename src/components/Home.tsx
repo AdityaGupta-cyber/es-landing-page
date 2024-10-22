@@ -66,6 +66,37 @@ interface TextPosition {
 }
 
 export default function Home({ id }: any) {
+
+  const [isMd, setIsMd] = useState(false);
+  const [isSm, setIsSm] = useState(false);
+
+  useEffect(() => {
+    // Define media queries for 'sm' and 'md' screen sizes
+    const mdQuery = window.matchMedia('(min-width: 768px)');
+    const smQuery = window.matchMedia('(max-width: 640px)');
+
+    // Handlers to update state when media queries change
+    const handleMdChange = (e) => setIsMd(e.matches);
+    const handleSmChange = (e) => setIsSm(e.matches);
+
+    // Set initial value
+    setIsMd(mdQuery.matches);
+    setIsSm(smQuery.matches);
+
+    // Add event listeners
+    mdQuery.addListener(handleMdChange);
+    smQuery.addListener(handleSmChange);
+
+    // Cleanup
+    return () => {
+      mdQuery.removeListener(handleMdChange);
+      smQuery.removeListener(handleSmChange);
+    };
+  }, []);
+
+
+
+
   const [activeIndex, setActiveIndex] = useState(-1);
   const [current, setCurrent] = useState(-1);
   const [start, setStart] = useState(false);
@@ -381,25 +412,26 @@ export default function Home({ id }: any) {
           <div className="absolute w-screen z-0 h-screen top-0 left-0 opacity-5">
             <AnimatePresence>
               <motion.img
-                className="object-cover w-full absolute bottom-0"
+                className="object-cover w-full absolute bottom-0 rotate-0  "
                 key={activeIndex}
                 src={`/images/${activeIndex}/1.png`}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ opacity: 1 } }
                 exit={{ opacity: 0 }}
               />
             </AnimatePresence>
           </div>
-          <main className="flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
+          <main className="  flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[2000px] lg:ml-20 xl:ml-20">
             <div
               className={`${
-                knowMore ? "mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
-              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-44`}
+                knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
+              } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-64`}
             >
-              <div className="w-full mb-8 lg:mb-0">
-                <AnimatePresence>
+              <div className="  w-full mt-16 lg:mt-0">
+                
+                  <AnimatePresence>
                   <motion.div
-                    className="text-4xl overflow-hidden sm:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
+                    className="  text-sm overflow-hidden md:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
                     animate={controls3}
                     initial={{ scale: 1, position: "relative", x: 0, y: 0 }}
                     exit={{
@@ -418,13 +450,15 @@ export default function Home({ id }: any) {
                           isTransitioning ? "transition-out" : ""
                         } ${
                           isEntering ? "transition-in" : ""
-                        } text-4xl overflow-hidden origin-center sm:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words`}
+                        } text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[350px] xl:w-[550px] break-words `}
                       >
                         {products[activeIndex]?.title}
                       </h2>
                     )}
                   </motion.div>
                 </AnimatePresence>
+               
+                
                 {knowMore ? (
                   <div className="relative flex justify-center">
                     <CaseStudy
@@ -444,18 +478,18 @@ export default function Home({ id }: any) {
 
                     <h2
                       style={{
-                        fontWeight: 400,
+                        fontWeight: 300, 
                       }}
                       className={`ease-in-out title ${
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      } mb-6 max-w-md lg:text-xs xl:text-sm sm:text-sm leading-relaxed font-sans text-[#FBFEF9CC] uppercase`}
+                      }  mb-6 max-w-md lg:text-sm xl:text-sm text-xs leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase`}
                     >
                       {products[activeIndex]?.description}
                     </h2>
                     <button
-                      className="inline-block font-semibold text-sm sm:text-base border border-[#ff6b35] text-[#FBFEF9] px-4 sm:px-6 py-2 rounded-full hover:bg-[#ff6b35] hover:text-white transition-colors tracking-wider"
+                      className="inline-block font-semibold text-sm sm:text-sm border border-[#ff6b35] text-[#FBFEF9] px-4 sm:px-6 py-2 rounded-full hover:bg-[#ff6b35] hover:text-white transition-colors tracking-wider"
                       onClick={handleKnowMore}
                     >
                       KNOW MORE
@@ -464,12 +498,18 @@ export default function Home({ id }: any) {
                 )}
               </div>
               {!knowMore && (
-                <div className="sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible lg:mt-20 xl:-mt-10">
+                <div className="  sticky lg:-right-40 lg:ml-56 xl:ml-0 xl:-right-10 overflow-visible lg:mt-20 xl:-mt-10">
                   <div
                     className="relative"
-                    style={{
-                      width: `${containerSize}px`,
-                      height: `${containerSize}px`,
+                    
+                    // style={{
+                    //   width: `${containerSize}px`,
+                    //   height: `${containerSize}px`,
+                    // }}
+
+                    style = {{
+                      width: isMd ? '90%' : isSm? '98%' : `${containerSize}px`,
+                      height: isMd ? 'auto' : isSm? 'auto' : `${containerSize}px`, 
                     }}
                   >
                     {images.map((imageComponent, index) => {
@@ -477,11 +517,13 @@ export default function Home({ id }: any) {
                         calculatePosition(index);
 
                       return (
+                        <div>
+                        
                         <div
                           key={index}
-                          className="absolute transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
+                          className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
                           style={{
-                            left: `${x - 150}px`,
+                            left: `${x - 500}px`,
                             top: `${y}px`,
                             opacity,
                             transform: `rotate(${rotate}deg)`,
@@ -489,6 +531,40 @@ export default function Home({ id }: any) {
                         >
                           {imageComponent}
                         </div>
+
+
+                        
+                          <div
+                          key={index}
+                          className=" block lg:hidden  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
+                          // style={{
+                          //    left: `${x + 140}px`,
+                          //   top: `${y - 130  }px`,
+                          //   opacity,
+                          //   transform: `rotate(${rotate}deg)`,
+                          // }}
+
+                          style = {{
+                            left: isMd ? `${x + 140}px` : isSm ? `${x + 20}px` : `${x + 140}px`,
+                            top: isMd ? `${y - 130}px` : isSm ? `${y - 130}px` : `${y - 130}px`,
+                            opacity,
+                            transform: `rotate(${rotate}deg)`,
+                          }}
+
+
+
+                        >{imageComponent}
+                          {/* <div className="   w-[30%] h-6 mx-auto">
+                             
+                          </div> */}
+                         
+                        </div>
+                        </div>
+                        
+
+
+
+                        
                       );
                     })}
                   </div>

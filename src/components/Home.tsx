@@ -13,46 +13,43 @@ const BlackMango = localFont({
 const products = [
   {
     title: "VIBRATION",
-    description: `life and living all not equal
+    description: `Life and living all not equal
 flames and fire are not in same sequel
 
 `,
   },
   {
     title: "SCARLET ELEGANCE",
-    description: `attraction and have there own defination
-security and saftey posses there own reason
+    description: `Attraction can have their own definition, security and safety possess their own reason
 `,
   },
   {
     title: "BLOOMSCAPE",
-    description: `attraction and have there own defination
-security and saftey posses there own reason
+    description: `Attraction can have their own definition, security and safety possess their own reason
 
 `,
   },
   {
     title: "CLAW CONSOLE",
-    description: `life and living all not equal
+    description: `Life and living all not equal
 flames and fire are not in same sequel
 
 `,
   },
   {
     title: "COURTSIDE COMFORT",
-    description: `shine and grace are not the same
+    description: `Shine and grace are not the same
 there is difference between smooth and plane
 `,
   },
   {
     title: "REVIVED GLORY",
-    description: `attraction and have there own defination
-security and saftey posses there own reason
+    description: `Attraction can have their own definition, security and safety possess their own reason
 `,
   },
   {
     title: "TIGER EYE",
-    description: `poison and venom have different------
+    description: `Poison and venom have different------
 earth and glob have different dencity
 `,
   },

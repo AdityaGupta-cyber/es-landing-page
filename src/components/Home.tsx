@@ -151,7 +151,7 @@ export default function Home({ id }: any) {
     return (
       <div
         key={index}
-        className="relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[450px]  ml-10 md:ml-0 md:mt-0"
+        className="relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[420px]  ml-10 md:ml-0 md:mt-0"
       >
         <motion.img
           src={`/images/${index}/3.png`}
@@ -434,7 +434,9 @@ export default function Home({ id }: any) {
                     transition={{ duration: 1.5 }}
                   >
                     {isKnowMore ? (
-                      <div className="origin-center w-fit">{fixedText}</div>
+                      <div className="w-fit text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[450px] xl:w-[580px] break-normal">
+                        {fixedText}
+                      </div>
                     ) : (
                       <h2
                         className={`ease-in-out title ${
@@ -469,13 +471,13 @@ export default function Home({ id }: any) {
                     <h2
                       style={{
                         fontWeight: 300,
-                        fontSize: "20px",
+                        fontSize: "17px",
                       }}
                       className={`ease-in-out title ${
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      }  mb-6 max-w-md leading-10 tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase mt-[250px] md:mt-0`}
+                      }  mb-6 max-w-md tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase mt-[250px] md:mt-0`}
                     >
                       {products[activeIndex]?.description}
                     </h2>

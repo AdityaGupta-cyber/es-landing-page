@@ -152,7 +152,7 @@ The creation process involved extensive experimentation with various materials, 
     <ParallaxProvider>
       <main className="max-w-full w-full px-4 mt-10">
         <section className="mb-24">
-          <div className=" -ml-2  lg:-ml-[70px]">
+          <div className=" -ml-12  lg:-ml-[110px]">
             <NextVideo
               src={p[0]}
               autoPlay
@@ -162,7 +162,7 @@ The creation process involved extensive experimentation with various materials, 
               controls={false}
             />
           </div>
-          <div className=" w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40">
+          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40 -ml-12">
             <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
@@ -173,7 +173,7 @@ The creation process involved extensive experimentation with various materials, 
         </section>
 
         <section className="mb-24 min-w-screen">
-          <div className="relative mb-4 -ml-[150px] w-screen">
+          <div className="relative mb-4 -ml-12 lg:-ml-[110px] w-screen">
             <ParallaxBanner
               className="para"
               style={{ aspectRatio: "2 / 1" }}
@@ -190,7 +190,7 @@ The creation process involved extensive experimentation with various materials, 
         </section>*/}
 
           <section className="min-w-screen">
-            <div className="relative mb-4 -ml-9 md:-ml-11 lg:-ml-[150px] w-screen">
+            <div className="relative mb-4 -ml-0 md:-ml-12 lg:-ml-[110px] w-screen">
               <ParallaxBanner
                 onMouseEnter={() => {
                   if (!dark) {
@@ -204,7 +204,7 @@ The creation process involved extensive experimentation with various materials, 
             </div>
           </section>
 
-          <section className="  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
+          <section className="-ml-12  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
             <h3
               className={`${CR.className} text-xl md:text-3xl lg:text-5xl font-light leading-snug mb-4 uppercase`}
             >
@@ -217,7 +217,7 @@ The creation process involved extensive experimentation with various materials, 
             </p>
           </section>
 
-          <section className="-ml-20 mb-24 grid grid-cols-2 gap-4">
+          <section className="-ml-40 mb-24 grid grid-cols-2 gap-4">
             <div className="relative aspect-[4/5.1]">
               <Image
                 src={p[6]}

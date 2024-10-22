@@ -474,7 +474,7 @@ export default function Home({ id }: any) {
                         isTransitioning ? "transition-out" : ""
                       } ${
                         isEntering ? "transition-in" : ""
-                      }  mb-6 max-w-md tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase mt-[350px] md:mt-0`}
+                      }  mb-6 max-w-md tracking-tight lg:tracking-normal md:leading-relaxed font-sans text-[#FBFEF9CC] normalcase mt-[320px] md:mt-0`}
                     >
                       {products[activeIndex]?.description}
                     </h2>

@@ -150,7 +150,7 @@ The creation process involved extensive experimentation with various materials, 
 
   return (
     <ParallaxProvider>
-      <main className="max-w-[1600px] w-full px-4 mt-10 2xl:flex 2xl:flex-col 2xl:items-center 2xl:-ml-[60px]">
+      <main className="max-w-[1600px] w-full px-4 mt-10 2xl:flex 2xl:flex-col 2xl:items-center 2xl:-ml-[0px]">
         <section className="mb-24">
           <div className=" md:-ml-12  lg:-ml-[110px] w-screen">
             <NextVideo

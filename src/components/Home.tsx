@@ -323,7 +323,7 @@ export default function Home({ id }: any) {
         zIndex: 40,
       });
     } else {
-      const pos = [22, 8, 16, 14, 5, 14, 22];
+      const pos = [24, 12, 19, 18, 12, 19, 25];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",
@@ -431,7 +431,7 @@ export default function Home({ id }: any) {
                     transition={{ duration: 1.5 }}
                   >
                     {isKnowMore ? (
-                      <div className="w-fit text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative lg:w-[450px] xl:w-[580px] break-normal">
+                      <div className="w-fit text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative">
                         {fixedText}
                       </div>
                     ) : (

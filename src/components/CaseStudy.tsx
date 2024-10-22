@@ -152,7 +152,7 @@ The creation process involved extensive experimentation with various materials, 
     <ParallaxProvider>
       <main className="max-w-full w-full px-4 mt-10">
         <section className="mb-24">
-          <div className=" -ml-12  lg:-ml-[110px]">
+          <div className=" md:-ml-12  lg:-ml-[110px]">
             <NextVideo
               src={p[0]}
               autoPlay

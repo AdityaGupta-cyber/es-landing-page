@@ -173,7 +173,7 @@ The creation process involved extensive experimentation with various materials, 
         </section>
 
         <section className="mb-24 min-w-screen">
-          <div className="relative mb-4 -ml-12 lg:-ml-[110px] w-screen">
+          <div className="relative mb-4 md:-ml-12 lg:-ml-[110px] w-screen">
             <ParallaxBanner
               className="para"
               style={{ aspectRatio: "2 / 1" }}
@@ -204,7 +204,7 @@ The creation process involved extensive experimentation with various materials, 
             </div>
           </section>
 
-          <section className="-ml-12  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
+          <section className="md:-ml-12  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
             <h3
               className={`${CR.className} text-xl md:text-3xl lg:text-5xl font-light leading-snug mb-4 uppercase`}
             >
@@ -218,7 +218,7 @@ The creation process involved extensive experimentation with various materials, 
           </section>
 
           <section className="-ml-40 mb-24 grid grid-cols-2 gap-4">
-            <div className="relative aspect-[4/5.1]">
+            <div className="relative aspect-[4/5.3] md:aspect-[4/5.1]">
               <Image
                 src={p[6]}
                 alt="Elegant table in a luxurious setting"

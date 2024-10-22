@@ -419,7 +419,7 @@ export default function Home({ id }: any) {
                 knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
               } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-[500px]`}
             >
-              <div className="flex flex-col text-center items-center md:text-start md:items-start  w-full mt-40 md:mt-16 lg:mt-0">
+              <div className="flex flex-col text-center items-center md:text-start md:items-start  w-full mt-32 md:mt-16 lg:mt-0">
                 <AnimatePresence>
                   <motion.div
                     className="  text-sm overflow-hidden md:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"

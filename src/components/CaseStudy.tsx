@@ -162,7 +162,7 @@ The creation process involved extensive experimentation with various materials, 
               controls={false}
             />
           </div>
-          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40 -ml-12">
+          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40 md:-ml-12">
             <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
@@ -204,7 +204,7 @@ The creation process involved extensive experimentation with various materials, 
             </div>
           </section>
 
-          <section className="md:-ml-12  w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
+          <section className="px-4 lg:-ml-6 w-full md:w-[98%] mx-auto my-24 md:my-36 lg:my-40 text-center">
             <h3
               className={`${CR.className} text-xl md:text-3xl lg:text-5xl font-light leading-snug mb-4 uppercase`}
             >

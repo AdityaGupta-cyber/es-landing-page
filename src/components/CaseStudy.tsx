@@ -162,7 +162,7 @@ The creation process involved extensive experimentation with various materials, 
               controls={false}
             />
           </div>
-          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-40 md:-ml-12">
+          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-20 lg:mt-40 lg:mb-20 xl:mb-14 md:-ml-12">
             <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
@@ -217,7 +217,7 @@ The creation process involved extensive experimentation with various materials, 
             </p>
           </section>
 
-          <section className="-ml-40 mb-24 grid grid-cols-2 gap-4">
+          <section className="lg:-ml-40 mb-24 grid grid-cols-2 gap-4">
             <div className="relative aspect-[4/5.3] md:aspect-[4/5.1]">
               <Image
                 src={p[6]}

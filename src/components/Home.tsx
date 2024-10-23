@@ -386,7 +386,9 @@ export default function Home({ id }: any) {
       <div
         className="relative min-h-screen w-full bg-white"
         ref={sectionRef}
-        style={{ height: `${3500}px` }}
+        style={{
+          height: knowMore && screenSize == "mobile" ? "auto" : `${3500}px`,
+        }}
       >
         <div
           className={`${
@@ -416,7 +418,11 @@ export default function Home({ id }: any) {
                 knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
               } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-[500px]`}
             >
-              <div className="flex flex-col text-center items-center md:text-start md:items-start  w-full mt-24 md:mt-16 lg:mt-0">
+              <div
+                className={`flex flex-col text-center items-center md:text-start md:items-start  w-full mt-24 md:mt-16 lg:mt-0 ${
+                  knowMore && screenSize == "mobile" ? "-mt-10" : ""
+                }`}
+              >
                 <AnimatePresence>
                   <motion.div
                     className="  text-sm overflow-hidden md:text-5xl lg:text-6xl xl:text-8xl mb-4 tracking-wide z-20 relative min-w-fit w-fit lg:-mt-20 xl:mt-0 origin-center"
@@ -431,7 +437,9 @@ export default function Home({ id }: any) {
                     transition={{ duration: 1.5 }}
                   >
                     {isKnowMore ? (
-                      <div className="w-fit text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative">
+                      <div
+                        className={`w-fit text-4xl overflow-hidden origin-center  md:text-5xl lg:text-6xl xl:text-[80px] mb-4 tracking-wide z-20 relative`}
+                      >
                         {fixedText}
                       </div>
                     ) : (

@@ -3,6 +3,7 @@ import Link from "next/link";
 import LogoAnimation from "./LogoAnimation";
 import Image from "next/image";
 import localFont from "next/font/local";
+import LogoAnimation3 from "./LogoAnimation3";
 
 interface MenuProps {
   isOpen: boolean;
@@ -16,7 +17,7 @@ const BlackMango = localFont({
 export default function Menu() {
   return (
     <nav
-      className={`fixed h-[50%] inset-0 bg-[#FF7600] text-white py-8 px-6 md:px-12 overflow-visible z-50 ${BlackMango.className}`}
+      className={`fixed h-[350px] md:h-[220px] lg:h-[360px] xl:h-[400px] inset-0 bg-[#FF7600] text-white py-8 px-6 md:px-12 overflow-visible z-50 ${BlackMango.className}`}
     >
       <div className="max-w-7xl relative z-20 mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mt-5 md:gap-10">
         <div className="mb-4 md:mb-0">
@@ -45,8 +46,8 @@ export default function Menu() {
             302, Eastern Court, Plot No 12 Sindhi Society, Chembur Mumbai -71
           </p>
         </div>
-        <div className="text-right hidden md:block">
-          <Image src="/logo.svg" width={340} height={340} alt="alt" />
+        <div className="text-right hidden md:block mt-10">
+          <LogoAnimation3 />
         </div>
       </div>
       <Image

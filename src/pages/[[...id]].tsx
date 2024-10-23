@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import LogoAnimation2 from "@/components/LogoAnimation2";
 import Home from "@/components/Home";
 import { useRouter } from "next/router";
-import introV from "../../videos/1.mp4";
 
 export default function Page() {
   const controls = useAnimation();
@@ -181,7 +180,7 @@ export default function Page() {
               {intro && (
                 <BackgroundVideo
                   ref={videoRef1}
-                  src={introV}
+                  src={"/1.mp4"}
                   autoPlay
                   muted
                   loop
@@ -214,7 +213,7 @@ export default function Page() {
               {intro && (
                 <BackgroundVideo
                   ref={videoRef2}
-                  src={introV}
+                  src={"/1.mp4"}
                   autoPlay
                   muted
                   loop

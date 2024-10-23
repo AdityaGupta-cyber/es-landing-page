@@ -259,7 +259,7 @@ export default function Home({ id }: any) {
   }, [activeIndex, start, knowMore]);
 
   const calculatePosition = (index: number): TextPosition => {
-    const rotate = -(rotation * 300) % 8;
+    const rotate = screenSize == "mobile" ? 0 : -(rotation * 300) % 8;
     const x = -70;
     const y = -rotation * 5600 + index * 710;
     //console.info(x, y);

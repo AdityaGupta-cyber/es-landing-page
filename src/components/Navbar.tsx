@@ -43,10 +43,13 @@ export default function Navbar({ dark }: any) {
             className={`text-[#ff6b35] text-xl ${BlackMango.className} tracking-wider overflow-hidden`}
           >
             <Image
-              src="/logo1.png"
+              onClick={() => {
+                window.open("/", "_self");
+              }}
+              src="/logo1.svg"
               width="150"
               height="150"
-              className="-mt-5"
+              className="-mt-0 cursor-pointer"
               alt=""
             />
           </h1>

@@ -358,7 +358,7 @@ export default function Home({ id }: any) {
         zIndex: 40,
       });
     } else {
-      const pos = [20, 12, 19, 18, 12, 19, 25];
+      const pos = [22, 12, 19, 18, 12, 19, 25];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",
@@ -422,7 +422,7 @@ export default function Home({ id }: any) {
         className="relative min-h-screen w-full bg-white"
         ref={sectionRef}
         style={{
-          height: knowMore && screenSize == "mobile" ? "auto" : `${3500}px`,
+          height: knowMore && screenSize == "mobile" ? "auto" : `${3540}px`,
         }}
       >
         <div
@@ -574,7 +574,7 @@ export default function Home({ id }: any) {
 
                           <div
                             key={index}
-                            className=" block lg:hidden  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
+                            className=" block lg:hidden -ml-4  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
                             // style={{
                             //    left: `${x + 140}px`,
                             //   top: `${y - 130  }px`,

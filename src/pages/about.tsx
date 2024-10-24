@@ -225,7 +225,7 @@ function MobColumn1() {
       className="mt-10 block md:hidden"
       layers={[
         {
-          speed: -100,
+          speed: -50,
           children: (
             <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
               <ScrollPlayVideo src="/aboutpic.mp4" />
@@ -244,7 +244,7 @@ function MobColumn() {
       className="-mt-20 block md:hidden"
       layers={[
         {
-          speed: -100,
+          speed: -50,
           children: (
             <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
               <ScrollPlayVideo src="/aboutpic.mp4" />

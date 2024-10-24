@@ -40,8 +40,8 @@ export default function Menu() {
         </div>
         <div className="mb-4 md:mb-0 text-md font-sans text-[12px] lg:text-[20px] mt-5">
           <p className="mb-1">Say Hello</p>
-          <p className="mb-1">es@gmail.com</p>
-          <p>+91 7778899910</p>
+          <p className="mb-1">ekantsingh@gmail.com</p>
+          <p>+91 8380802813</p>
           <p className="mt-2 max-w-xs">
             302, Eastern Court, Plot No 12 Sindhi Society, Chembur Mumbai -71
           </p>

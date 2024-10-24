@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import { useState, useEffect, useRef } from "react";
 import CaseStudy from "./CaseStudy";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
@@ -13,45 +14,73 @@ const BlackMango = localFont({
 const products = [
   {
     title: "VIBRATION",
-    description: `Life and living all not equal
-flames and fire are not in same sequel
-
-`,
+    description: (
+      <>
+        Life and living are not equal,
+        <br />
+        Flames and fire are not in sequel.
+      </>
+    ),
   },
   {
     title: "SCARLET ELEGANCE",
-    description: `Attraction can have their own definition, security and safety possess their own reason
-`,
+    description: (
+      <>
+        Attraction and affection have their own definition,
+        <br />
+        Security and safety posses their own reasons.
+      </>
+    ),
   },
   {
     title: "BLOOMSCAPE",
-    description: `Attraction can have their own definition, security and safety possess their own reason
-
-`,
+    description: (
+      <>
+        Attraction and affection have their own definition,
+        <br />
+        Security and safety posses their own reasons.
+      </>
+    ),
   },
   {
     title: "CLAW CONSOLE",
-    description: `Life and living all not equal
-flames and fire are not in same sequel
-
-`,
+    description: (
+      <>
+        Life and living are not equal,
+        <br />
+        Flames and fire are not in sequel.
+      </>
+    ),
   },
   {
     title: "COURTSIDE COMFORT",
-    description: `Shine and grace are not the same
-there is difference between smooth and plane
-`,
+    description: (
+      <>
+        Shine and grace are not the same,
+        <br />
+        There is a difference between smooth and plain.
+      </>
+    ),
   },
   {
     title: "REVIVED GLORY",
-    description: `Attraction can have their own definition, security and safety possess their own reason
-`,
+    description: (
+      <>
+        Attraction and affection have their own definition,
+        <br />
+        Security and safety posses their own reasons.
+      </>
+    ),
   },
   {
     title: "TIGER EYE",
-    description: `Poison and venom have different------
-earth and glob have different dencity
-`,
+    description: (
+      <>
+        Poison and venom have different,
+        <br />
+        Earth and globe have different density.
+      </>
+    ),
   },
 ];
 
@@ -215,6 +244,12 @@ export default function Home({ id }: any) {
         const lowerBound = i * (1 / products.length) + 0.08 * i;
         const upperBound = (i + 1) * (1 / products.length) - 0.08 * i;
 
+        if (knowMore && scrollPosition < 0.171) {
+          window.scrollTo({
+            top: 10, // Adjust this value based on your layout
+          });
+        }
+
         if (
           scrollPosition > lowerBound &&
           scrollPosition <= upperBound &&
@@ -323,7 +358,7 @@ export default function Home({ id }: any) {
         zIndex: 40,
       });
     } else {
-      const pos = [24, 12, 19, 18, 12, 19, 25];
+      const pos = [20, 12, 19, 18, 12, 19, 25];
       controls3.start({
         x: `${pos[activeIndex]}vw`,
         y: "5%",
@@ -420,7 +455,7 @@ export default function Home({ id }: any) {
             >
               <div
                 className={`flex flex-col text-center items-center md:text-start md:items-start  w-full mt-24 md:mt-16 lg:mt-0 ${
-                  knowMore && screenSize == "mobile" ? "-mt-10" : ""
+                  knowMore && screenSize == "mobile" ? "-mt-16" : ""
                 }`}
               >
                 <AnimatePresence>
@@ -466,10 +501,15 @@ export default function Home({ id }: any) {
                   </div>
                 ) : (
                   <>
-                    <div className="flex gap-6">
-                      <div className="bg-[#FF7600] mt-2 h-[1px] w-[200px]"></div>
-                      <p className="overflow-hidden text-[#FF7600] mb-4 text-xs sm:text-sm tracking-widest w-fit">
-                        LOGO
+                    <div className="flex gap-6 items-center mb-4 -mt-3">
+                      <div className="bg-[#FF7600] mt-2 h-[1px] w-[200px] lg:w-[400px]"></div>
+                      <p className="overflow-hidden text-[#FF7600] pt-2 text-xs sm:text-sm tracking-widest w-fit">
+                        <Image
+                          src="/logo2.svg"
+                          alt="logo"
+                          width={20}
+                          height={20}
+                        />
                       </p>
                     </div>
 

@@ -42,8 +42,9 @@ export default function CaseStudy({ dark, setDark, idd }: any) {
       "Create a sophisticated table design that blends Art Deco aesthetics with contemporary functionality. Use bold, contrasting colors typical of Art Deco, such as black and gold, or deep blue and gold. The gold inlay should be the focal point, with its geometric patterns and sleek lines highlighted through strategic design and placement. Consider materials like polished wood, lacquer, or marble to complement the gold work",
       "/images/0/5.png",
       <>
-        life and living all not equal
-        <br /> flames and fire are not in same sequel
+        Life and living all not equal,
+        <br />
+        Flames and fire are not in same sequel.
       </>,
       "/images/0/6.png",
       "/images/0/7.png",
@@ -56,7 +57,11 @@ export default function CaseStudy({ dark, setDark, idd }: any) {
       "/images/1/4.png",
       "Create a striking chair design that blends Baroque extravagance with contemporary ergonomics. Use a deep, rich red velvet for the upholstery, reminiscent of royal chambers and theater curtains. The gold metalwork should feature elaborate, curving forms typical of Baroque design, but streamlined for a modern touch. Consider incorporating motifs like acanthus leaves, shells, or scrollwork in the gold elements. The chair's form should be generous and inviting, with plush cushioning that promises extreme comfort.",
       "/images/1/5.png",
-      "Attraction can have their own definition, security and safety possess their own reason.",
+      <>
+        Attraction can have their own definition,
+        <br />
+        Security and safety possess their own reason
+      </>,
       "/images/1/6.png",
       "/images/1/7.png",
       "/images/1/8.png",
@@ -72,7 +77,11 @@ Would you like to explore any specific aspects of this chair design further? Per
       "/images/2/4.png",
       "Create an innovative coffee table design that captures the dynamic, flowing forms of a flower garden in full bloom. Use a combination of materials to represent different elements of a garden landscap",
       "/images/2/5.png",
-      `Attraction can have their own definition, security and safety possess their own reason.`,
+      <>
+        Attraction can have their own definition,
+        <br />
+        Security and safety possess their own reason
+      </>,
       "/images/2/6.png",
       "/images/2/7.png",
       "/images/2/8.png",
@@ -88,7 +97,8 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "/images/3/5.png",
       <>
         life and living all not equal
-        <br /> flames and fire are not in same sequel
+        <br />
+        Flames and fire are not in same sequel
       </>,
 
       "/images/3/6.png",
@@ -103,8 +113,9 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Create a bold, eye-catching couch that mimics the spherical shape of a basketball. Use premium leather in the iconic orange hue of a basketball, with exaggerated black stitching to replicate the ball's seams. Incorporate subtle Jordan brand elements, such as a small Jumpman logo, to tie it to the merchandise line. The overall aesthetic should balance playfulness with sophistication.",
       "/images/4/5.png",
       <>
-        shine and grace are not the same there is difference between smooth and
-        plane
+        Shine and grace are not the same,
+        <br />
+        There is a difference between smooth and plain.
       </>,
 
       "/images/4/6.png",
@@ -119,8 +130,9 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Design an imposing table that echoes the Colosseum's circular structure. Use rich, warm tones in the wood to evoke ancient Rome, contrasting with the sleek glass top. Incorporate intricate carvings on the ash wood pillars to mimic the Colosseum's decorative elements. The overall aesthetic should balance monumental presence with refined elegance, capturing both the Colosseum's scale and its detailed artistry.",
       "/images/5/5.png",
       <>
-        Attraction can have their own definition, security and safety possess
-        their own reason.
+        Attraction and affection have their own definition,
+        <br />
+        Security and safety posses their own reasons.
       </>,
 
       "/images/5/6.png",
@@ -135,8 +147,9 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Create an elegant and striking conference table design that captures the essence of a tiger's eye gemstone when viewed from above. Use a combination of materials to replicate the stone's distinctive banded appearance, incorporating rich golden-browns, honey tones, and deep amber hues. The surface should have a high-gloss finish to emulate the gemstone's natural luster and create the illusion of depth. Consider incorporating subtle lighting elements within the table to enhance the chatoyancy effect, making the surface appear to shift and change as people move around it.",
       "/images/6/5.png",
       <>
-        poison and venom have different------ earth and glob have different
-        dencity
+        Poison and venom have different,
+        <br />
+        Earth and glob have different density
       </>,
 
       "/images/6/6.png",
@@ -150,9 +163,9 @@ The creation process involved extensive experimentation with various materials, 
 
   return (
     <ParallaxProvider>
-      <main className="max-w-[1600px] w-full px-4 mt-10 2xl:flex 2xl:flex-col 2xl:items-center 2xl:-ml-[0px]">
+      <main className="max-w-[1600px] w-full px-4 mt-10 2xl:flex 2xl:flex-col 2xl:items-center 2xl:-ml-20 lg:-ml-28">
         <section className="mb-24">
-          <div className=" md:-ml-12  lg:-ml-[110px] w-screen">
+          <div className=" md:-ml-12  2xl:-ml-16 w-screen">
             <NextVideo
               src={p[0]}
               autoPlay
@@ -162,7 +175,7 @@ The creation process involved extensive experimentation with various materials, 
               controls={false}
             />
           </div>
-          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-20 lg:mt-40 lg:mb-20 xl:mb-14 md:-ml-12">
+          <div className="px-10 lg:px-0 w-[98%] mx-auto flex flex-col md:flex-row  justify-between mt-20 lg:mt-40 lg:mb-20 xl:mb-14 md:-ml-12 2xl:ml-0 xl:px-20">
             <p className="text-xl md:text-4xl uppercase  mb-2 md:mb-0 tracking-widest mt-2 w-full md:w-[50%]">
               CONTENT & BRIEF
             </p>
@@ -173,11 +186,23 @@ The creation process involved extensive experimentation with various materials, 
         </section>
 
         <section className="mb-24 min-w-screen">
-          <div className="relative mb-4 md:-ml-12 lg:-ml-[110px] w-screen">
+          <div className="relative mb-4 md:-ml-12 2xl:-ml-16 w-screen">
             <ParallaxBanner
               className="para"
               style={{ aspectRatio: "2 / 1" }}
-              layers={[{ image: p[2], speed: -30 }]}
+              layers={[
+                {
+                  speed: -30,
+                  children: (
+                    <Image
+                      src={p[2]}
+                      alt="Elegant table in a luxurious setting"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  ),
+                },
+              ]}
             />
           </div>
 
@@ -190,7 +215,7 @@ The creation process involved extensive experimentation with various materials, 
         </section>*/}
 
           <section className="min-w-screen">
-            <div className="relative mb-4 -ml-0 md:-ml-12 lg:-ml-[110px] w-screen">
+            <div className="relative mb-4 -ml-0 md:-ml-12 2xl:-ml-16 w-screen">
               <ParallaxBanner
                 onMouseEnter={() => {
                   if (!dark) {
@@ -199,7 +224,19 @@ The creation process involved extensive experimentation with various materials, 
                 }}
                 className="para"
                 style={{ aspectRatio: "2 / 1" }}
-                layers={[{ image: p[4], speed: -30 }]}
+                layers={[
+                  {
+                    speed: -30,
+                    children: (
+                      <Image
+                        src={p[4]}
+                        alt="Elegant table in a luxurious setting"
+                        layout="fill"
+                        objectFit="cover"
+                      />
+                    ),
+                  },
+                ]}
               />
             </div>
           </section>
@@ -217,7 +254,7 @@ The creation process involved extensive experimentation with various materials, 
             </p>
           </section>
 
-          <section className="lg:-ml-40 mb-24 grid grid-cols-2 gap-4">
+          <section className="lg:ml-20 md:-ml-20 xl:-ml-20 mb-24 grid grid-cols-2 gap-4">
             <div className="relative aspect-[4/5.3] md:aspect-[4/5.1]">
               <Image
                 src={p[6]}

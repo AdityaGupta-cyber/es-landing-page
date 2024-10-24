@@ -29,7 +29,7 @@ const ScrollPlayVideo: React.FC<ScrollPlayVideoProps> = ({
         if (videoRef.current) {
           videoRef.current.pause();
         }
-      }, 100);
+      }, 300);
     };
 
     window.addEventListener("scroll", handleScroll);

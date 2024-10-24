@@ -14,7 +14,7 @@ export default function Page() {
   const sectionRef2 = useRef<HTMLDivElement>(null);
   const videoRef1 = useRef<HTMLVideoElement>(null);
   const videoRef2 = useRef<HTMLVideoElement>(null);
-  const [intro, setIntro] = useState(true);
+  const intro = true;
   const syncIntervalRef = useRef<number | null>(null);
   const router = useRouter();
   const { id }: any = router.query;
@@ -131,15 +131,13 @@ export default function Page() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
+
     if (scrollPosition === 0) {
       controls.start({ opacity: 1, y: 0 });
       controls2.start({ opacity: 1, y: 0 });
     } else {
       controls.start({ opacity: 1, y: 1000 });
       controls2.start({ opacity: 1, y: -1000 });
-      setTimeout(() => {
-        setIntro(false);
-      }, 1000);
     }
   };
 
@@ -155,7 +153,7 @@ export default function Page() {
 
   return (
     <>
-      {!id && (
+      {id == undefined && (
         <>
           <motion.div className="z-0 front">
             <motion.div

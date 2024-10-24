@@ -78,7 +78,7 @@ function Header() {
         className="w-full h-auto object-cover"
         ref={imageRef}
       />
-      <div className="absolute bg-transparent  md:bg-white text-center p-2 w-[48%] md:p-8 lg:p-10 -top-2 md:-top-32 lg:-top-40 -left-2 md:-left-20 lg:-left-28 right-0 text-slate-100 md:text-black ,w-full md:w-fit rounded-full">
+      <div className="absolute bg-transparent bg-white text-center px-7 py-3 md:p-8 lg:p-10 -top-6 md:-top-32 lg:-top-40 -left-3 md:-left-20 lg:-left-28 right-0 text-black ,w-full w-fit rounded-full">
         <span className="text-sm md:text-4xl lg:text-5xl font-bold tracking-wide">
           MEET
         </span>{" "}
@@ -91,7 +91,7 @@ function Header() {
           A ROVING INDUSTRIAL <br className="hidden md:inline" /> DESIGNER
         </h2>
       </div>
-      <div className="absolute bg-transparent  md:bg-white text-center px-4 py-4 md:px-16 md:py-8 lg:px-20 lg:py-10 -bottom-2 md:-bottom-32 lg:-bottom-40 right-0 md:-right-20 lg:-right-28 text-slate-100  md:text-black w-[56%] md:w-fit rounded-full">
+      <div className="absolute bg-transparent  bg-white text-center px-4 py-4 md:px-16 md:py-8 lg:px-20 lg:py-10 -bottom-10 md:-bottom-32 lg:-bottom-40 -right-3 md:-right-20 lg:-right-28 text-black w-fit rounded-full">
         <span className="text-xs md:text-4xl lg:text-5xl font-bold tracking-wide">
           THE MASTERS OF <br />
           BRINGING
@@ -109,7 +109,7 @@ function Header() {
 
 function MainContent() {
   return (
-    <main className="relative overflow-visible bg-[#FBFEF9] text-black mt-20 md:mt-[200px] lg:mt-[300px] p-4 md:p-[100px] lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 ">
+    <main className="relative overflow-visible bg-[#FBFEF9] text-black mt-20 md:mt-[200px] lg:mt-[300px] md:p-[100px] lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 ">
       <LeftColumn />
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-32 justify-start">
         <div className="w-full md:w-[600px] lg:w-[1000px] h-[0px] md:-ml-24 lg:-ml-36 top-0 overflow-visible"></div>
@@ -131,11 +131,11 @@ function RightColumn() {
   return (
     <div className="md:-mt-[500px] lg:-mt-[800px]">
       <h2
-        className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
+        className={`text-2xl p-4 md:p-0  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
       >
         EYES OF IMAGINATION
       </h2>
-      <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
         Ekant Singh envision THE world where his thoughts IDEATE THE
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
@@ -148,12 +148,13 @@ function RightColumn() {
         className="para w-full h-auto object-cover my-8 pt-10 md:pt-16 lg:pt-20 aspect-[756/406]"
         layers={[{ image: "/about1.png", speed: -10 }]}
       />
+      <MobColumn1 />
       <h2
-        className={`text-2xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+        className={`text-2xl p-4 md:p-0  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
-      <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
         I{"'"}ve always had an insatiable appetite for turning the unusual into
         art. As an industrial designer, I see potential in materials others
         might overlook. My vision pushes me to transcend conventional design
@@ -182,7 +183,7 @@ function RightColumn() {
           className="w-full h-auto object-cover"
         />
       </div>
-      <div className="pb-10 md:pb-[100px] lg:pb-[135px] flex justify-center text-center flex-col items-center">
+      <div className="pb-10 p-4 md:p-0 md:pb-[100px] lg:pb-[135px] flex justify-center text-center flex-col items-center">
         <h2
           className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
         >
@@ -217,11 +218,41 @@ function LeftColumn() {
   );
 }
 
+function MobColumn1() {
+  return (
+    <ParallaxBanner
+      style={{ aspectRatio: "1.5" }}
+      className="mt-10 block md:hidden"
+      layers={[
+        {
+          speed: -100,
+          children: (
+            <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
+              <ScrollPlayVideo src="/aboutpic.mp4" />
+            </div>
+          ),
+        },
+      ]}
+    />
+  );
+}
+
 function MobColumn() {
   return (
-    <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
-      <ScrollPlayVideo src="/aboutpic.mp4" />
-    </div>
+    <ParallaxBanner
+      style={{ aspectRatio: "1/1.7" }}
+      className="-mt-20 block md:hidden"
+      layers={[
+        {
+          speed: -100,
+          children: (
+            <div className="block md:hidden w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-52 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
+              <ScrollPlayVideo src="/aboutpic.mp4" />
+            </div>
+          ),
+        },
+      ]}
+    />
   );
 }
 

@@ -167,7 +167,7 @@ export default function Page() {
             >
               <motion.div
                 animate={{ opacity: 0 }}
-                className="absolute top-0 h-screen w-screen z-50 flex justify-center items-center"
+                className="absolute -top-20 md:top-0 h-screen w-screen z-50 flex justify-center items-center"
                 transition={{
                   delay: 5,
                   duration: 3,
@@ -184,7 +184,7 @@ export default function Page() {
                   loop
                   playsInline
                   controls={false}
-                  className="absolute top-[50%] md:top-[65%] h-screen md:h-auto"
+                  className="absolute top-[50%] h-screen"
                 />
               )}
             </motion.div>
@@ -217,7 +217,7 @@ export default function Page() {
                   loop
                   playsInline
                   controls={false}
-                  className="absolute -top-[50%] md:-top-[35%] md:h-auto h-screen"
+                  className="absolute -top-[50%] h-screen"
                 />
               )}
             </motion.div>

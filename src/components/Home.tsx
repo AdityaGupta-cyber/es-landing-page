@@ -175,9 +175,15 @@ export default function Home({ id }: any) {
       });
     };
     return (
-      <div
+      <motion.div
+        initial={{
+          opacity: 0.3,
+          transform: "scale(0.5)",
+          filter: "blur(10px)",
+        }}
+        whileInView={{ opacity: 1, transform: "scale(1)", filter: "blur(0px)" }}
         key={index}
-        className={`relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[420px]  ml-10 md:ml-0 md:mt-0`}
+        className={`relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[420px]  ml-10 md:ml-0 md:mt-0 origin-center `}
         id={`image-${index}`}
       >
         <motion.img
@@ -199,8 +205,6 @@ export default function Home({ id }: any) {
           height={500}
         />
         <motion.img
-          initial={{ filter: "blur(10px)" }}
-          whileInView={{ filter: "blur(0px)" }}
           src={`/images/${index}/1.png`}
           animate={controls5}
           onClick={() => handleImageClick(controls5, controls6, controls7)}
@@ -209,7 +213,7 @@ export default function Home({ id }: any) {
           width={500}
           height={500}
         />
-      </div>
+      </motion.div>
     );
   });
 

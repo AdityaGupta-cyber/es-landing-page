@@ -565,12 +565,11 @@ export default function Home({ id }: any) {
                         <div key={index}>
                           <div
                             key={index}
-                            className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
+                            className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2"
                             style={{
                               left: `${x - 500}px`,
                               top: `${y}px`,
                               opacity,
-                              transform: `rotate(${rotate}deg)`,
                             }}
                           >
                             {imageComponent}
@@ -578,7 +577,7 @@ export default function Home({ id }: any) {
 
                           <div
                             key={index}
-                            className=" block -mt-10 lg:hidden -ml-4  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2 transition-all duration-300"
+                            className=" block -mt-10 lg:hidden -ml-4  w-[70%] mx-auto     absolute transform -translate-x -1/2 -translate-y-1/2"
                             // style={{
                             //    left: `${x + 140}px`,
                             //   top: `${y - 130  }px`,
@@ -598,7 +597,6 @@ export default function Home({ id }: any) {
                                 ? `${y - 130}px`
                                 : `${y - 130}px`,
                               opacity,
-                              transform: `rotate(${rotate}deg)`,
                             }}
                           >
                             {imageComponent}

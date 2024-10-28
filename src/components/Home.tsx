@@ -565,7 +565,7 @@ export default function Home({ id }: any) {
                         <div key={index}>
                           <div
                             key={index}
-                            className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2"
+                            className="hidden lg:block  absolute transform -translate-x -1/2 -translate-y-1/2 mt-[300px]"
                             style={{
                               left: `${x - 500}px`,
                               top: `${y}px`,

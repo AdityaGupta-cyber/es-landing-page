@@ -177,7 +177,8 @@ export default function Home({ id }: any) {
     return (
       <div
         key={index}
-        className="relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[420px]  ml-10 md:ml-0 md:mt-0"
+        className={`relative overflow-visible h-[250px] w-[250px]  md:h-[80vh] z-10 md:w-[38vw] md:max-w-[600px] cursor-pointer -mt-[420px]  ml-10 md:ml-0 md:mt-0`}
+        id={`image-${index}`}
       >
         <motion.img
           src={`/images/${index}/3.png`}
@@ -255,9 +256,10 @@ export default function Home({ id }: any) {
           scrollPosition <= upperBound &&
           !knowMore
         ) {
-          window.scrollTo({
-            top: i * 440 + 150, // Adjust this value based on your layout
-          });
+          const section = document.getElementById(`image-${i}`);
+          /* window.scrollTo({
+            top: section?.offsetTop, // Adjust this value based on your layout
+          });*/
           setActiveIndex(i);
           break;
         }
@@ -287,9 +289,11 @@ export default function Home({ id }: any) {
       !knowMore
     ) {
       setCurrent(activeIndex);
-      window.scrollTo({
-        top: activeIndex * 440 + 150, // Adjust this value based on your layout
-      });
+      const section = document.getElementById(`image-${activeIndex}`);
+      console.log(section);
+      /*window.scrollTo({
+        top: section?.offsetTop, // Adjust this value based on your layout
+      });*/
     }
   }, [activeIndex, start, knowMore]);
 
@@ -422,7 +426,7 @@ export default function Home({ id }: any) {
         className="relative min-h-screen w-full bg-white"
         ref={sectionRef}
         style={{
-          height: knowMore && screenSize == "mobile" ? "auto" : `${3540}px`,
+          height: knowMore && screenSize == "mobile" ? "auto" : `${4000}px`,
         }}
       >
         <div

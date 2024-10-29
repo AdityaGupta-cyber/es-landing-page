@@ -23,7 +23,7 @@ export default function Page() {
   return (
     <ParallaxProvider>
       <div
-        className={`bg-[#433631] mx-0 px-0 flex justify-center min-h-screen w-full text-white ${BlackMango.className}`}
+        className={`bg-[#433631] mx-0 px-0 flex justify-center min-h-screen w-full ${BlackMango.className} text-[#433631]`}
       >
         <div className="py-8 w-full">
           <div className="w-full px-4 max-w-6xl  md:w-[60%] lg:w-[65%] mx-auto">
@@ -68,7 +68,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative  mb-12 mt-20 md:mt-[200px] lg:mt-[300px]">
+    <header className="relative  mb-12 mt-20 md:mt-[200px] lg:mt-[300px] text-[#433631]">
       <Image
         src={placeholderImages[currentImageIndex]}
         id="ekant"
@@ -78,7 +78,7 @@ function Header() {
         className="w-full h-auto object-cover"
         ref={imageRef}
       />
-      <div className="absolute bg-transparent bg-white text-center px-7 py-3 md:p-8 lg:p-10 -top-6 md:-top-32 lg:-top-40 -left-3 md:-left-20 lg:-left-28 right-0 text-black ,w-full w-fit rounded-full">
+      <div className="absolute bg-transparent bg-white text-center px-7 py-3 md:p-8 lg:p-10 -top-6 md:-top-32 lg:-top-40 -left-3 md:-left-20 lg:-left-28 right-0 text-[#433631] ,w-full w-fit rounded-full">
         <span className="text-sm md:text-4xl lg:text-5xl font-bold tracking-wide">
           MEET
         </span>{" "}
@@ -91,7 +91,7 @@ function Header() {
           A ROVING INDUSTRIAL <br className="hidden md:inline" /> DESIGNER
         </h2>
       </div>
-      <div className="absolute bg-transparent  bg-white text-center px-4 py-4 md:px-16 md:py-8 lg:px-20 lg:py-10 -bottom-10 md:-bottom-32 lg:-bottom-40 -right-3 md:-right-20 lg:-right-28 text-black w-fit rounded-full">
+      <div className="absolute bg-transparent  bg-white text-center px-4 py-4 md:px-16 md:py-8 lg:px-20 lg:py-10 -bottom-10 md:-bottom-32 lg:-bottom-40 -right-3 md:-right-20 lg:-right-28 text-[#433631] w-fit rounded-full">
         <span className="text-xs md:text-4xl lg:text-5xl font-bold tracking-wide">
           THE MASTERS OF <br />
           BRINGING
@@ -109,7 +109,7 @@ function Header() {
 
 function MainContent() {
   return (
-    <main className="relative overflow-visible bg-[#FBFEF9] text-black mt-20 md:mt-[200px] lg:mt-[300px] md:p-[100px] lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 ">
+    <main className="relative overflow-visible bg-[#FBFEF9] text-[#433631] mt-20 md:mt-[200px] lg:mt-[300px] md:p-[100px] lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 ">
       <LeftColumn />
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-32 justify-start">
         <div className="w-full md:w-[600px] lg:w-[1000px] h-[0px] md:-ml-24 lg:-ml-36 top-0 overflow-visible"></div>

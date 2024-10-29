@@ -248,9 +248,9 @@ The creation process involved extensive experimentation with various materials, 
               {p[5]}
             </h3>
             <p
-              className={`text-sm md:text-lg font-normal tracking-widest ${GS.className}`}
+              className={`text-sm w-full md:text-lg font-normal text-right max-w-[800px] xl:max-w-[1200px] tracking-widest font-sans text-[#FF7600]`}
             >
-              EKANT SINGH
+              - EKANT SINGH
             </p>
           </section>
 

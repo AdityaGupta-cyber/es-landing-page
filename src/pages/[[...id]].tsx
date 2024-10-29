@@ -1,11 +1,12 @@
 "use client";
+
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useRouter } from "next/router";
 import BackgroundVideo from "next-video/background-video";
 import LogoAnimation from "@/components/LogoAnimation";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import LogoAnimation2 from "@/components/LogoAnimation2";
 import Home from "@/components/Home";
-import { useRouter } from "next/router";
 
 export default function Page() {
   const controls = useAnimation();
@@ -19,14 +20,43 @@ export default function Page() {
   const router = useRouter();
   const { id }: any = router.query;
   const isPlayingRef = useRef(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const preloadVideo = (src: string): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      const video = document.createElement("video");
+      video.preload = "auto";
+      video.muted = true;
+      video.src = src;
+
+      const timeoutId = setTimeout(() => {
+        reject(new Error("Video preload timeout"));
+      }, 30000); // 30 seconds timeout
+
+      video.oncanplaythrough = () => {
+        clearTimeout(timeoutId);
+        resolve();
+      };
+
+      video.onerror = () => {
+        clearTimeout(timeoutId);
+        reject(new Error("Video preload error"));
+      };
+
+      video.load();
+    });
+  };
 
   const synchronizeVideos = () => {
     const video1 = videoRef1.current;
     const video2 = videoRef2.current;
 
-    if (!video1 || !video2) return;
+    if (!video1 || !video2) {
+      console.error("Video elements not found");
+      return () => {}; // Return empty cleanup function
+    }
 
-    // Video setup
     const setupVideo = (video: HTMLVideoElement) => {
       video.muted = true;
       video.defaultMuted = true;
@@ -42,48 +72,26 @@ export default function Page() {
     setupVideo(video1);
     setupVideo(video2);
 
-    // Sync playback times
     const syncPlaybackTimes = () => {
       if (!video1 || !video2) return;
       const diff = Math.abs(video1.currentTime - video2.currentTime);
 
-      // Correct time difference if significant (> 0.03s)
       if (diff > 0.03) {
         const targetTime = Math.min(video1.currentTime, video2.currentTime);
         video1.currentTime = targetTime;
         video2.currentTime = targetTime;
       }
 
-      // Ensure both videos are playing
       if (isPlayingRef.current && (video1.paused || video2.paused)) {
-        video1.play().catch(() => {});
-        video2.play().catch(() => {});
+        video1.play().catch(console.error);
+        video2.play().catch(console.error);
       }
 
-      // Schedule the next sync check
       syncIntervalRef.current = requestAnimationFrame(syncPlaybackTimes);
     };
 
-    // Initialize videos and start synchronization
     const initializeVideos = async () => {
       try {
-        await Promise.all([
-          new Promise<void>((resolve) => {
-            if (video1.readyState >= 4) resolve();
-            else
-              video1.addEventListener("canplaythrough", () => resolve(), {
-                once: true,
-              });
-          }),
-          new Promise<void>((resolve) => {
-            if (video2.readyState >= 4) resolve();
-            else
-              video2.addEventListener("canplaythrough", () => resolve(), {
-                once: true,
-              });
-          }),
-        ]);
-
         await Promise.all([video1.play(), video2.play()]);
         isPlayingRef.current = true;
         syncIntervalRef.current = requestAnimationFrame(syncPlaybackTimes);
@@ -92,40 +100,11 @@ export default function Page() {
       }
     };
 
-    // Handle pauses and play states
-    const handlePause = () => {
-      if (!video1 || !video2) return;
-      video1.pause();
-      video2.pause();
-      isPlayingRef.current = false;
-    };
-
-    const handlePlay = () => {
-      if (!video1 || !video2) return;
-      video1.play().catch(() => {});
-      video2.play().catch(() => {});
-      isPlayingRef.current = true;
-    };
-
-    // Add event listeners
-    video1.addEventListener("pause", handlePause);
-    video2.addEventListener("pause", handlePause);
-    video1.addEventListener("play", handlePlay);
-    video2.addEventListener("play", handlePlay);
-    video1.addEventListener("seeked", syncPlaybackTimes);
-    video2.addEventListener("seeked", syncPlaybackTimes);
-
     initializeVideos();
 
     return () => {
       if (syncIntervalRef.current)
         cancelAnimationFrame(syncIntervalRef.current);
-      video1.removeEventListener("pause", handlePause);
-      video2.removeEventListener("pause", handlePause);
-      video1.removeEventListener("play", handlePlay);
-      video2.removeEventListener("play", handlePlay);
-      video1.removeEventListener("seeked", syncPlaybackTimes);
-      video2.removeEventListener("seeked", syncPlaybackTimes);
     };
   };
 
@@ -142,14 +121,54 @@ export default function Page() {
   };
 
   useEffect(() => {
+    const loadVideos = async () => {
+      try {
+        console.log("Starting video preload");
+        await preloadVideo("/1.mp4");
+        console.log("Video preload complete");
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error preloading video:", error);
+        setError((error as Error).message);
+        setIsLoading(false);
+      }
+    };
+
+    loadVideos();
+
     window.addEventListener("scroll", handleScroll);
-    const cleanup = synchronizeVideos();
+    const cleanupSync = synchronizeVideos();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      cleanup?.();
+      cleanupSync();
     };
-  }, [controls]);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black">
+        <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black text-white">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Error Loading Video</h1>
+          <p>{error}</p>
+          <button
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            onClick={() => window.location.reload()}
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

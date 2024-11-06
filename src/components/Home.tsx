@@ -463,7 +463,7 @@ export default function Home({ id }: any) {
             >
               <div
                 className={`flex flex-col text-center items-center md:text-start md:items-start  w-full mt-24 md:mt-16 lg:mt-0 ${
-                  knowMore ? "-mt-[250px] md:-mt-0" : ""
+                  knowMore ? "-mt-[800px] md:-mt-0" : ""
                 }`}
               >
                 <AnimatePresence>

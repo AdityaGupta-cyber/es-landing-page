@@ -174,7 +174,7 @@ export default function Page() {
     <>
       {id == undefined && (
         <>
-          <motion.div className="z-0 front">
+          <motion.div className="hidden md:block z-0 front">
             <motion.div
               initial={{ opacity: 1, y: 0 }}
               animate={controls2}
@@ -237,6 +237,40 @@ export default function Page() {
                   playsInline
                   controls={false}
                   className="absolute -top-[50%] h-screen"
+                />
+              )}
+            </motion.div>
+          </motion.div>
+          <motion.div className="block md:hidden z-0 front">
+            <motion.div
+              initial={{ opacity: 1, y: 0 }}
+              animate={controls2}
+              ref={sectionRef2}
+              transition={{
+                duration: 0.7,
+              }}
+              className="z-[60] fixed flex justify-center overflow-hidden items-center min-w-screen h-full w-screen bg-[#433631]"
+            >
+              <motion.div
+                animate={{ opacity: 0 }}
+                className="absolute md:top-0 h-screen w-screen z-50 flex justify-center items-center"
+                transition={{
+                  delay: 5,
+                  duration: 3,
+                }}
+              >
+                <LogoAnimation2 />
+              </motion.div>
+              {intro && (
+                <BackgroundVideo
+                  ref={videoRef1}
+                  src={"/1.mp4"}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                  className="absolute top-[0%] h-screen"
                 />
               )}
             </motion.div>

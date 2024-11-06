@@ -50,7 +50,15 @@ const ScrollPlayVideo: React.FC<ScrollPlayVideoProps> = ({
 
   return (
     <div className="video-container">
-      <video ref={videoRef} width="100%" height="auto" loop muted playsInline>
+      <video
+        ref={videoRef}
+        width="100%"
+        height="100vh"
+        loop
+        muted
+        playsInline
+        style={{ objectFit: "cover", height: "100vh" }}
+      >
         <source src={src} type={type} />
         Your browser does not support the video tag.
       </video>

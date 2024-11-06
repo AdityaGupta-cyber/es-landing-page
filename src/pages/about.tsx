@@ -8,6 +8,8 @@ import ScrollPlayVideo from "@/components/ScrollPlayVideo";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { useState, useEffect, useRef } from "react";
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const BlackMango = localFont({
@@ -29,6 +31,7 @@ export default function Page() {
           <div className="w-full px-4 max-w-6xl  md:w-[60%] lg:w-[65%] mx-auto">
             <Header />
           </div>
+          <div className="h-[20px] md:h-[200px] lg:h-[200px]" />
           <MainContent />
           <Footer />
         </div>
@@ -109,7 +112,7 @@ function Header() {
 
 function MainContent() {
   return (
-    <main className="relative overflow-visible bg-[#FBFEF9] text-[#433631] mt-20 md:mt-[200px] lg:mt-[300px] md:p-[100px] lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 ">
+    <main className="relative bg-[#FBFEF9] text-[#433631] md:p-[100px] md:pt-0 lg:pt-0 lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 overflow-clip justify-start items-start">
       <LeftColumn />
       <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-32 justify-start">
         <div className="w-full md:w-[600px] lg:w-[1000px] h-[0px] md:-ml-24 lg:-ml-36 top-0 overflow-visible"></div>
@@ -118,7 +121,7 @@ function MainContent() {
           alt="Separator"
           width={6000}
           height={6000}
-          className="hidden md:block w-[20px] h-auto object-cover my-8 pt-20 -mt-[600px] lg:-mt-[950px]"
+          className="hidden md:block w-[20px] ml-10 h-auto object-cover my-8 pt-20 -mt-[700px]"
         />
         <RightColumn />
         <MobColumn />
@@ -129,13 +132,13 @@ function MainContent() {
 
 function RightColumn() {
   return (
-    <div className="md:-mt-[500px] lg:-mt-[800px]">
+    <div className="md:-mt-[300px] lg:-mt-[400px]">
       <h2
-        className={`text-2xl p-4 md:p-0  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
+        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
       >
         EYES OF IMAGINATION
       </h2>
-      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
         Ekant Singh envision THE world where his thoughts IDEATE THE
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
@@ -144,17 +147,30 @@ function RightColumn() {
         styling, he aim{"'"}s to bring his artistic vision to life, crafting
         timeless creations that leave EVER lasting impressions.
       </p>
+
       <ParallaxBanner
-        className="para w-full h-auto object-cover my-8 pt-10 md:pt-16 lg:pt-20 aspect-[756/406]"
-        layers={[{ image: "/about1.png", speed: -10 }]}
+        className="para w-full h-auto object-cover my-8 pt-10 md:pt-12 lg:pt-16 aspect-[756/406]"
+        layers={[
+          {
+            speed: -10,
+            children: (
+              <Image
+                src="/about1.png"
+                alt="Elegant table in a luxurious setting"
+                layout="fill"
+                objectFit="cover"
+              />
+            ),
+          },
+        ]}
       />
       <MobColumn1 />
       <h2
-        className={`text-2xl p-4 md:p-0  md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-16 lg:mt-24`}
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
-      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
         I{"'"}ve always had an insatiable appetite for turning the unusual into
         art. As an industrial designer, I see potential in materials others
         might overlook. My vision pushes me to transcend conventional design
@@ -167,7 +183,7 @@ function RightColumn() {
         For me, design isn{"'"}t just a job - it{"'"}s a journey of constant
         reinvention and creative exploration.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-16 lg:mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-12 lg:mt-16">
         <Image
           src="/about2.png"
           alt="Design example 1"
@@ -183,14 +199,14 @@ function RightColumn() {
           className="w-full h-auto object-cover"
         />
       </div>
-      <div className="pb-10 p-4 md:p-0 md:pb-[100px] lg:pb-[135px] flex justify-center text-center flex-col items-center">
+      <div className="pb-10 p-4 md:p-0 md:pb-[80px] lg:pb-[100px] flex justify-center text-center flex-col items-center h-fit">
         <h2
-          className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-20 lg:mt-40`}
+          className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-16 lg:mt-24`}
         >
           YOU LIVE AFTER <br />
           YOU DIE
         </h2>
-        <p className="mb-6 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-12 lg:my-20 leading-relaxed font-sans">
+        <p className="mb-16 md:mb-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
           If you{"'"}ve written your love from the heart and you really mean the
           words that you have written then no matter you remain or depart, your
           picture of words would never be forgotten.
@@ -203,7 +219,6 @@ function RightColumn() {
           <br />
           <br /> No matter, we remain or are forgotten but our art would
           flourish and remain.
-          <br /> <br />
         </p>
       </div>
     </div>
@@ -212,7 +227,7 @@ function RightColumn() {
 
 function LeftColumn() {
   return (
-    <div className="hidden md:block w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-4 md:-mt-[100px] lg:-mt-[135px] sticky top-0 overflow-visible">
+    <div className="hidden md:block w-full md:w-[56%] lg:w-[500px] -ml-0 md:-ml-24 lg:-ml-36 -mt-4 sticky top-0 overflow-visible h-screen">
       <ScrollPlayVideo src="/aboutpic.mp4" />
     </div>
   );
@@ -258,8 +273,92 @@ function MobColumn() {
 
 function Footer() {
   return (
-    <footer className="mt-12 text-center text-sm text-gray-400">
-      <p>&copy; 2023. All rights reserved.</p>
+    <footer className="mt-12 text-center">
+      <div className="flex justify-center space-x-6 mb-4">
+        <Link
+          href="https://facebook.com"
+          className="text-white hover:text-[#FF7600] transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+          <span className="sr-only">Facebook</span>
+        </Link>
+        <Link
+          href="https://www.instagram.com/ekantsingh/"
+          className="text-white hover:text-[#FF7600] transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span className="sr-only">Instagram</span>
+        </Link>
+        <Link
+          href="https://twitter.com"
+          className="text-white hover:text-[#FF7600] transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+          <span className="sr-only">Twitter</span>
+        </Link>
+        <Link
+          href="https://linkedin.com"
+          className="text-white hover:text-[#FF7600] transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          <span className="sr-only">LinkedIn</span>
+        </Link>
+      </div>
+      <p className="text-sm text-white">
+        &copy; 2023 Ekant Singh. All rights reserved.
+      </p>
     </footer>
   );
 }

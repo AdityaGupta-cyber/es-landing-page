@@ -458,12 +458,12 @@ export default function Home({ id }: any) {
           <main className="flex-grow relative z-20 flex p-4 sm:p-6 lg:p-12 max-w-[1500px] lg:mx-10 xl:ml-20">
             <div
               className={`${
-                knowMore ? " mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
+                knowMore ? " md:mt-[200px]" : "lg:mt-[10vh] xl:mt-[7vh]"
               } w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-52 md:gap-32 lg:gap-[500px]`}
             >
               <div
                 className={`flex flex-col text-center items-center md:text-start md:items-start  w-full mt-24 md:mt-16 lg:mt-0 ${
-                  knowMore ? "-mt-[800px] md:-mt-0" : ""
+                  knowMore ? "" : ""
                 }`}
               >
                 <AnimatePresence>

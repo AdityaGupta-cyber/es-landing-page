@@ -247,7 +247,7 @@ export default function Page() {
               animate={controls2}
               ref={sectionRef2}
               transition={{
-                duration: 0.7,
+                duration: 0.1,
               }}
               className="z-[60] fixed flex justify-center overflow-hidden items-center min-w-screen h-full w-screen bg-[#433631]"
             >
@@ -255,8 +255,7 @@ export default function Page() {
                 animate={{ opacity: 0 }}
                 className="absolute md:top-0 h-screen w-screen z-50 flex justify-center items-center"
                 transition={{
-                  delay: 5,
-                  duration: 3,
+                  duration: 10,
                 }}
               >
                 <LogoAnimation2 />

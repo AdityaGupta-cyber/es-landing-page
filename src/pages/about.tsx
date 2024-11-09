@@ -116,14 +116,14 @@ function MainContent() {
   return (
     <main className="relative bg-[#FBFEF9] text-[#433631] md:p-[100px] md:pt-0 lg:pt-0 lg:p-[135px] pb-0 gap-10 md:gap-20 lg:gap-40 overflow-clip justify-start items-start">
       <LeftColumn />
-      <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-32 justify-start">
-        <div className="w-full md:w-[600px] lg:w-[1000px] h-[0px] md:-ml-24 lg:-ml-36 top-0 overflow-visible"></div>
+      <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-0 justify-start items-start justify-items-start">
+        <div className="w-full md:w-[1200px] lg:w-[1200px] 2xl:w-[400px] h-[0px] md:-ml-24 lg:-ml-[00px] top-0 overflow-visible"></div>
         <Image
           src="/separator.png"
           alt="Separator"
           width={6000}
           height={6000}
-          className="hidden md:block w-[20px] ml-10 h-auto object-cover my-8 pt-20 -mt-[700px]"
+          className="hidden lg:ml-40 lg:mr-12 xl:ml-10 xl:mr-12  md:block w-[20px] ml-10 h-auto object-cover my-8 pt-20 -mt-[700px] lg:-mt-[400px]"
         />
         <RightColumn />
         <MobColumn />
@@ -134,7 +134,7 @@ function MainContent() {
 
 function RightColumn() {
   return (
-    <div className="md:-mt-[300px] lg:-mt-[400px] md:ml-[100px] lg:ml-[150px] xl:ml-0">
+    <div className="md:-mt-[300px] xl:ml-0 max-w-[800px]">
       <h2
         className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
       >
@@ -291,25 +291,6 @@ function Footer() {
     <footer className="mt-12 text-center">
       <div className="flex justify-center space-x-6 mb-4">
         <Link
-          href="https://facebook.com"
-          className="text-white hover:text-[#FF7600] transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-          <span className="sr-only">Facebook</span>
-        </Link>
-        <Link
           href="https://www.instagram.com/ekantsingh/"
           className="text-white hover:text-[#FF7600] transition-colors"
         >
@@ -329,46 +310,6 @@ function Footer() {
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
           <span className="sr-only">Instagram</span>
-        </Link>
-        <Link
-          href="https://twitter.com"
-          className="text-white hover:text-[#FF7600] transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-          </svg>
-          <span className="sr-only">Twitter</span>
-        </Link>
-        <Link
-          href="https://linkedin.com"
-          className="text-white hover:text-[#FF7600] transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-          <span className="sr-only">LinkedIn</span>
         </Link>
       </div>
       <p className="text-sm text-white">

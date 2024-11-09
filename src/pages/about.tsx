@@ -136,11 +136,11 @@ function RightColumn() {
   return (
     <div className="md:-mt-[300px] xl:ml-0 max-w-[800px]">
       <h2
-        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
+        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mx-auto w-fit`}
       >
         EYES OF IMAGINATION
       </h2>
-      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none md:float-right my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
+      <p className="mb-6 p-4 text-center md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] float-none mx-auto my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
         Ekant Singh envision THE world where his thoughts IDEATE THE
         extraordinary work of PASSION. the unwavering commitment OF elegance and
         innovation, he seeks to create pieces that are not only unreal &
@@ -168,11 +168,11 @@ function RightColumn() {
       />
       <MobColumn1 />
       <h2
-        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-16 lg:mt-24`}
+        className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 mt-10 md:mt-16 lg:mt-24 w-fit mx-auto text-center`}
       >
         IN A WORLD FULL OF CREATIVE POSSIBILITY
       </h2>
-      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
+      <p className="mb-6 p-4 md:p-0 text-xs xl:text-sm max-w-full md:max-w-[300px] lg:max-w-[400px] mx-auto text-center my-4 md:my-8 lg:my-12 leading-relaxed font-sans">
         I{"'"}ve always had an insatiable appetite for turning the unusual into
         art. As an industrial designer, I see potential in materials others
         might overlook. My vision pushes me to transcend conventional design

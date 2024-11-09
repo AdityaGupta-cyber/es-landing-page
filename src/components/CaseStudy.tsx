@@ -43,9 +43,8 @@ export default function CaseStudy({ dark, setDark, idd }: any) {
       "Create a sophisticated table design that blends Art Deco aesthetics with contemporary functionality. Use bold, contrasting colors typical of Art Deco, such as black and gold, or deep blue and gold. The gold inlay should be the focal point, with its geometric patterns and sleek lines highlighted through strategic design and placement. Consider materials like polished wood, lacquer, or marble to complement the gold work",
       "/images/0/5.png",
       <>
-        Life and living all not equal,
-        <br />
-        Flames and fire are not in same sequel.
+        Shine and grace are not the same, <br />
+        There is a difference between smooth and plain.
       </>,
       "/images/0/6.png",
       "/images/0/7.png",
@@ -59,9 +58,9 @@ export default function CaseStudy({ dark, setDark, idd }: any) {
       "Create a striking chair design that blends Baroque extravagance with contemporary ergonomics. Use a deep, rich red velvet for the upholstery, reminiscent of royal chambers and theater curtains. The gold metalwork should feature elaborate, curving forms typical of Baroque design, but streamlined for a modern touch. Consider incorporating motifs like acanthus leaves, shells, or scrollwork in the gold elements. The chair's form should be generous and inviting, with plush cushioning that promises extreme comfort.",
       "/images/1/5.png",
       <>
-        Attraction can have their own definition,
+        Movement and motion are not together,
         <br />
-        Security and safety possess their own reason
+        Water and river don{"'"}t company forever.
       </>,
       "/images/1/6.png",
       "/images/1/7.png",
@@ -79,9 +78,9 @@ Would you like to explore any specific aspects of this chair design further? Per
       "Create an innovative coffee table design that captures the dynamic, flowing forms of a flower garden in full bloom. Use a combination of materials to represent different elements of a garden landscap",
       "/images/2/5.png",
       <>
-        Attraction can have their own definition,
+        Painting and art carry different meanings,
         <br />
-        Security and safety possess their own reason
+        Music and tunes carry different feelings.
       </>,
       "/images/2/6.png",
       "/images/2/7.png",
@@ -97,9 +96,9 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Create a luxurious console design that blends Renaissance aesthetics with contemporary elegance. Use rich, warm colors reminiscent of Italian Renaissance art, incorporating gold accents to represent the era's opulence. The petrified wood should be the focal point, with its natural patterns and colors highlighted through careful lighting and placement.",
       "/images/3/5.png",
       <>
-        life and living all not equal
+        Life and living are not equal,
         <br />
-        Flames and fire are not in same sequel
+        Flames and fire are not in sequel.
       </>,
 
       "/images/3/6.png",
@@ -114,9 +113,8 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Create a bold, eye-catching couch that mimics the spherical shape of a basketball. Use premium leather in the iconic orange hue of a basketball, with exaggerated black stitching to replicate the ball's seams. Incorporate subtle Jordan brand elements, such as a small Jumpman logo, to tie it to the merchandise line. The overall aesthetic should balance playfulness with sophistication.",
       "/images/4/5.png",
       <>
-        Shine and grace are not the same,
-        <br />
-        There is a difference between smooth and plain.
+        Souls and spirits reflect different stories, <br />
+        End and extinct reveal different theories.
       </>,
 
       "/images/4/6.png",
@@ -131,9 +129,8 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Design an imposing table that echoes the Colosseum's circular structure. Use rich, warm tones in the wood to evoke ancient Rome, contrasting with the sleek glass top. Incorporate intricate carvings on the ash wood pillars to mimic the Colosseum's decorative elements. The overall aesthetic should balance monumental presence with refined elegance, capturing both the Colosseum's scale and its detailed artistry.",
       "/images/5/5.png",
       <>
-        Attraction and affection have their own definition,
-        <br />
-        Security and safety posses their own reasons.
+        Fights and wars have different consequences, <br />
+        Trees and woods have different references.
       </>,
 
       "/images/5/6.png",
@@ -148,9 +145,8 @@ THE CREATION PROCESS INVOLVED COUNTLESS HOURS OBSERVING GARDENS IN DIFFERENT LIG
       "Create an elegant and striking conference table design that captures the essence of a tiger's eye gemstone when viewed from above. Use a combination of materials to replicate the stone's distinctive banded appearance, incorporating rich golden-browns, honey tones, and deep amber hues. The surface should have a high-gloss finish to emulate the gemstone's natural luster and create the illusion of depth. Consider incorporating subtle lighting elements within the table to enhance the chatoyancy effect, making the surface appear to shift and change as people move around it.",
       "/images/6/5.png",
       <>
-        Poison and venom have different,
-        <br />
-        Earth and glob have different density
+        Procuring and conquering don{"'"}t take equal sweat, <br />
+        Destruction and disaster don{"'"}t give equal threats.
       </>,
 
       "/images/6/6.png",

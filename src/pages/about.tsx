@@ -10,7 +10,9 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { useState, useEffect, useRef } from "react";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
-
+const CR = localFont({
+  src: "../pages/fonts/CR.otf",
+});
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const BlackMango = localFont({
   src: "../pages/fonts/BlackMango-SemiBold.otf",
@@ -132,7 +134,7 @@ function MainContent() {
 
 function RightColumn() {
   return (
-    <div className="md:-mt-[300px] lg:-mt-[400px]">
+    <div className="md:-mt-[300px] lg:-mt-[400px] md:ml-[100px] lg:ml-[150px] xl:ml-0">
       <h2
         className={`text-2xl p-4 md:p-0 md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6`}
       >
@@ -221,6 +223,19 @@ function RightColumn() {
           flourish and remain.
         </p>
       </div>
+      <section className="px-10 md:px-0 w-full flex justify-center  flex-col items-center max-w-[100%] mb-40 md:my-36 lg:my-40 text-center">
+        <h3
+          className={`${CR.className} text-xl md:text-lg lg:text-3xl font-light leading-snug mb-4 uppercase`}
+        >
+          Attraction and affection have their own defination, Security and
+          safety posses their own reasons.
+        </h3>
+        <p
+          className={`text-sm w-full md:text-lg font-normal text-right max-w-[800px] xl:max-w-[1200px] tracking-widest font-sans text-[#FF7600]`}
+        >
+          - EKANT SINGH
+        </p>
+      </section>
     </div>
   );
 }

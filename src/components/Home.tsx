@@ -17,9 +17,8 @@ const products = [
     title: "VIBRATION",
     description: (
       <>
-        Life and living are not equal,
-        <br />
-        Flames and fire are not in sequel.
+        Shine and grace are not the same, <br />
+        There is a difference between smooth and plain.
       </>
     ),
   },
@@ -27,9 +26,9 @@ const products = [
     title: "SCARLET ELEGANCE",
     description: (
       <>
-        Attraction and affection have their own definition,
+        Movement and motion are not together,
         <br />
-        Security and safety posses their own reasons.
+        Water and river don{"'"}t company forever.
       </>
     ),
   },
@@ -37,9 +36,9 @@ const products = [
     title: "BLOOMSCAPE",
     description: (
       <>
-        Attraction and affection have their own definition,
+        Painting and art carry different meanings,
         <br />
-        Security and safety posses their own reasons.
+        Music and tunes carry different feelings.
       </>
     ),
   },
@@ -57,9 +56,8 @@ const products = [
     title: "COURTSIDE COMFORT",
     description: (
       <>
-        Shine and grace are not the same,
-        <br />
-        There is a difference between smooth and plain.
+        Souls and spirits reflect different stories, <br />
+        End and extinct reveal different theories.
       </>
     ),
   },
@@ -67,9 +65,8 @@ const products = [
     title: "REVIVED GLORY",
     description: (
       <>
-        Attraction and affection have their own definition,
-        <br />
-        Security and safety posses their own reasons.
+        Fights and wars have different consequences, <br />
+        Trees and woods have different references.
       </>
     ),
   },
@@ -77,9 +74,8 @@ const products = [
     title: "TIGER EYE",
     description: (
       <>
-        Poison and venom have different,
-        <br />
-        Earth and globe have different density.
+        Procuring and conquering don{"'"}t take equal sweat, <br />
+        Destruction and disaster don{"'"}t give equal threats.
       </>
     ),
   },

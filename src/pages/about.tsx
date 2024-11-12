@@ -151,7 +151,7 @@ function RightColumn() {
       </p>
 
       <ParallaxBanner
-        className="para w-full h-auto object-cover my-8 pt-10 md:pt-12 lg:pt-16 aspect-[756/406]"
+        className="para w-full h-auto object-cover my-8 pt-10 md:pt-12 lg:pt-16 aspect-square md:aspect-[756/406]"
         layers={[
           {
             speed: -10,

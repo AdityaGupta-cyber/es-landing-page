@@ -185,8 +185,7 @@ The creation process involved extensive experimentation with various materials, 
         <section className="mb-24 min-w-screen">
           <div className="relative mb-4 md:-ml-12 2xl:-ml-16 w-screen">
             <ParallaxBanner
-              className="para"
-              style={{ aspectRatio: "2 / 1" }}
+              className="para aspect-square md:aspect-[2/1]"
               layers={[
                 {
                   speed: -30,
@@ -219,11 +218,10 @@ The creation process involved extensive experimentation with various materials, 
                     setDark(true);
                   }
                 }}
-                className="para"
-                style={{ aspectRatio: "2 / 1" }}
+                className="para aspect-square md:aspect-[2/1]"
                 layers={[
                   {
-                    speed: -30,
+                    speed: -15,
                     children: (
                       <Image
                         src={p[4]}

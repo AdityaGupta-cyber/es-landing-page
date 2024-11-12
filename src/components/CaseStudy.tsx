@@ -188,7 +188,7 @@ The creation process involved extensive experimentation with various materials, 
               className="para aspect-square md:aspect-[2/1]"
               layers={[
                 {
-                  speed: -30,
+                  speed: -15,
                   children: (
                     <Image
                       src={p[2]}
